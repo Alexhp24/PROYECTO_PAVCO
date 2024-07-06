@@ -1,0 +1,21 @@
+/* Estilo para los botones de forma individual */
+.shape-button {
+  margin: 5px; /* Espaciado externo de los botones de forma */
+  padding: 10px; /* Espaciado interno de los botones de forma */
+  background-color: #f01b1b; /* Color de fondo de los botones de forma */
+  border-radius: 10px;
+  border: 1px solid #ccc; /* Borde de los botones de forma */
+  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+  text-align: center; /* Alinea el texto al centro */
+  width: calc(50% - 10px); /* Ancho de los botones de forma */
+  font-size: 11px; /* Tamaño de fuente de los botones de forma */
+  display: flex; /* Usar flexbox para el diseño */
+  align-items: center; /* Alinear elementos verticalmente */
+}
+
+/* Estilo para los íconos dentro de los botones */
+.button-icon {
+  width: 120px; /* Ancho del icono */
+  height: auto; /* Altura ajustada automáticamente */
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+}

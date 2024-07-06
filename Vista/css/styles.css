@@ -1,0 +1,53 @@
+
+
+/* Estilo para los botones de forma individual */
+.shape-button {
+  margin: 5px; /* Espaciado externo de los botones de forma */
+  padding: 10px; /* Espaciado interno de los botones de forma */
+  background-color: #f01b1b; /* Color de fondo de los botones de forma */
+  border-radius: 10px;
+  border: 1px solid #ccc; /* Borde de los botones de forma */
+  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+  text-align: center; /* Alinea el texto al centro */
+  width: calc(50% - 10px); /* Ancho de los botones de forma */
+  font-size: 11px; /* Tamaño de fuente de los botones de forma */
+}
+
+/* Estilo al pasar el mouse sobre los botones de forma */
+.shape-button:hover {
+  background-color: #faf7f7; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* Estilo para el contenedor de información */
+#infoContainer, #infoContainered {
+  margin: 10px 0; /* Espaciado externo superior e inferior del contenedor */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para los contenedores de información emergente */
+#infoBox, #infotred {
+  display: none; /* Oculta los contenedores de información emergente */
+  margin: 10px 0; /* Espaciado externo superior e inferior del contenedor */
+  border: 1px solid #ccc; /* Borde del contenedor */
+  padding: 10px; /* Espaciado interno del contenedor */
+  width: 300px; /* Ancho del contenedor */
+  background-color: #f9f9f9; /* Color de fondo del contenedor */
+}
+
+button:hover {
+  background-color: white; /* Cambia el color de fondo al pasar el mouse */
+  color: rgb(46, 23, 248); /* Cambia el color del texto al pasar el mouse */
+  border: 2px solid;
+ }
+   /* Estilos para el contenedor del botón */
+   .shape-button {
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear elementos verticalmente */
+  }
+
+  /* Estilos para el icono */
+  .button-icon {
+    width: 15px; /* Ancho del icono */
+    height: auto; /* Altura ajustada automáticamente */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+  }
