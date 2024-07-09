@@ -76,6 +76,8 @@ if (true) {
                                   <th scope="col">Accesorios</th>
                                   <th scope="col">Cantidad</th>
                                 </tr>
+                              </thead>
+                              <tbody>
                                 <tr>
                                   <th scope="row">1</th>
                                   <td><button id="toggleColdPipe" class="btn btn-outline-primary btn-sm">Agua fria</button></td>
@@ -151,7 +153,7 @@ if (true) {
                                   <td><button id="toggleCrucesinConexion" class="btn btn-outline-primary btn-sm"> Cruces sin conexion</button></td>
                                   <td><span id="CrucesinConexion">0</span></td>
                                 </tr>
-                              </thead>
+                              </tbody>
                             </table>
                           </ul>
                         </div>

@@ -35,32 +35,20 @@ $(document).ready(function () {
     );
   }
 
-  const myButton = document.getElementById("guardardata");
+  const data = document.getElementById("datatuberiasaccesorios");
+console.log(data); // Esto imprimirá el elemento con el ID 'datatuberiasaccesorios'
+
+const myButton = document.getElementById("guardardata");
+
 myButton.addEventListener("click", function () {
-  const table = document.getElementById("datatuberiasaccesorios");
-  const rows = table.querySelectorAll("tbody tr");
+  // Suponiendo que 'data' es un elemento, necesitamos extraer su valor o contenido antes de convertirlo a JSON
+  const dataContent = data ? data.value || data.innerText || data.textContent : null;
 
-  let data = [];
-  rows.forEach(row => {
-    const numero = row.querySelector("th[scope=row]").innerText.trim();
-    const accesorios = row.querySelector("td button").innerText.trim();
-    const cantidad = row.querySelector("td span").innerText.trim();
-
-    data.push({
-      Numero: numero,
-      Accesorios: accesorios,
-      Cantidad: cantidad
-    });
-  });
-
-  console.log(data); // Verifica los datos antes de convertir a JSON
-
-  const DATAFORMATTER = JSON.stringify(data);
-  console.log(DATAFORMATTER);
+  // Convertir el contenido extraído a una cadena JSON
+  const DATAFORMATTER = JSON.stringify({ content: dataContent });
+  
+  console.log(DATAFORMATTER); // Esto imprimirá la versión en cadena del contenido de los datos
 });
-
-
-
 
   /*
   const data = document.getElementById("datatuberiasaccesorios");
@@ -68,8 +56,7 @@ myButton.addEventListener("click", function () {
   const myButton = document.getElementById("guardardata");
   myButton.addEventListener("click", function () {
     const DATAFORMATTER= JSON.stringify(data);
-    console.log(DATAFORMATTER)
+    console.log(DATAFORMATTER) 
     */
-
 
 });
