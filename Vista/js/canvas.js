@@ -123,66 +123,78 @@ document.getElementById("toggleY").addEventListener("click", function (event) {
 
 document.getElementById("toggleX").addEventListener("click", function (event) {
   tmpShape = new CodoT(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
 
 document.getElementById("toggle90").addEventListener("click", function (event) {
   tmpShape = new Codo90(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
 
 document.getElementById("toggleCA").addEventListener("click", function (event) {
   tmpShape = new CodoArriba(canvas, "#09BBD7");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
 
 document.getElementById("toggleCD").addEventListener("click", function (event) {
   tmpShape = new CodoAbajoA(canvas, "#09BBD7");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
 
 document
   .getElementById("toggleReduccion")
   .addEventListener("click", function (event) {
     tmpShape = new Reduccion(canvas, "#00FF00");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("toggleMontantes")
   .addEventListener("click", function (event) {
     tmpShape = new Montantes(canvas, "#09BBD7");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("toggleTeeAbajo")
   .addEventListener("click", function (event) {
     tmpShape = new TeeAbajo(canvas, "#09BBD7");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("toggleTeeArriba")
   .addEventListener("click", function (event) {
     tmpShape = new TeeArriba(canvas, "#09BBD7");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("toggleUnionUniversal")
   .addEventListener("click", function (event) {
     tmpShape = new UnionUniversal(canvas, "#09BBD7");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("toggleValvulaCheck")
   .addEventListener("click", function (event) {
     tmpShape = new ValvulaCheck(canvas, "#09BBD7");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("toggleLlaveGeneral")
   .addEventListener("click", function (event) {
     tmpShape = new LlaveGeneral(canvas, "#EB34F7");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("toggleCrucesinConexion")
   .addEventListener("click", function (event) {
     tmpShape = new CrucesinConexion(canvas, "orange");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 // ACCSESORIO DE DESAGUE
@@ -190,60 +202,70 @@ document
   .getElementById("CodoDesague_YEE")
   .addEventListener("click", function (event) {
     tmpShape = new DesagueYEE(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoDesague_TEE")
   .addEventListener("click", function (event) {
     tmpShape = new DesagueTEE(canvas, "orange");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoDesague_90")
   .addEventListener("click", function (event) {
     tmpShape = new Desague90(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoMontantesDes")
   .addEventListener("click", function (event) {
     tmpShape = new MontantesDes(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoCodoAbajo")
   .addEventListener("click", function (event) {
     tmpShape = new CodoAbajo(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoCodoHciaAbajo")
   .addEventListener("click", function (event) {
     tmpShape = new CodoHciaAbajo(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoReguistroBronce")
   .addEventListener("click", function (event) {
     tmpShape = new ReguistroBronce(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoCajaReguistro")
   .addEventListener("click", function (event) {
     tmpShape = new CajaReguistro(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoCodoCrusesDes")
   .addEventListener("click", function (event) {
     tmpShape = new CodoCrusesDes(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoTeeSanitario")
   .addEventListener("click", function (event) {
     tmpShape = new TeeSanitario(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 fileInput.addEventListener("change", function (event) {
@@ -319,7 +341,7 @@ canvas.addEventListener("mouseup", function (event) {
       return node.hitNode(selectedNode);
     });
     if (hitNode) {
-      selectedNode  = tmpShape.getNextNode(hitNode);
+      selectedNode = tmpShape.getNextNode(hitNode);
     } else {
       nodes.push(selectedNode);
       selectedNode = tmpShape.getNextNode(selectedNode);
@@ -332,12 +354,16 @@ canvas.addEventListener("mouseup", function (event) {
       addShape();
     }
   } else if (!selectedNode) {
-    selectedNode = nodes.find(function (node) {
-      return node.hitNode(getMousePos(canvas, event));
+    const hitShape = shapes.find(function (shape) {
+      return shape.hitNode(getMousePos(canvas, event));
     });
-    if (selectedNode && event.button === 2) {
-      deleteShape(selectedNode.parent);
+    if (hitShape && event.button === 2) {
+      deleteShape(hitShape);
       selectedNode = null;
+    } else {
+      selectedNode = nodes.find(function (node) {
+        return node.hitNode(getMousePos(canvas, event));
+      });
     }
   } else {
     selectedNode = null;

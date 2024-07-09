@@ -2,7 +2,7 @@ import { Node } from "./node.js";
 
 const circleSize = 4;
 const triangleSize = 10; // Tamaño fijo del triángulo
-const maxLineLength = 50; // Maximum line length in mm
+const maxLineLength = 50 * 3.77953; // Maximum line length in pixels (50 mm convertido a píxeles)
 
 export class Tubo {
   inicio = null;
@@ -43,20 +43,11 @@ export class Tubo {
   }
 
   done() {
-    /*     this.points.pop();
-    return this.points.length > 0; */
     return this.points.length == 2;
   }
 
   canBeDone() {
     return false;
-  }
-
-  hitNode(mouse) {
-    return this.points.find((point) => {
-      const dist = Math.hypot(mouse.x - point.x, mouse.y - point.y);
-      return dist < 2 * circleSize;
-    });
   }
 
   drawTriangle(x, y, size) {
@@ -83,16 +74,81 @@ export class Tubo {
     this.ctx.closePath();
   }
 
+  adjustToNearestAngle(start, end) {
+    const dx = end.x - start.x;
+    const dy = end.y - start.y;
+    const angle = Math.atan2(dy, dx);
+
+    // Angles in radians for 45° and 90°
+    const angles = [
+      0,
+      Math.PI / 4,
+      Math.PI / 2,
+      (3 * Math.PI) / 4,
+      Math.PI,
+      (-3 * Math.PI) / 4,
+      -Math.PI / 2,
+      -Math.PI / 4,
+    ];
+
+    let closestAngle = angles[0];
+    let minDifference = Math.abs(angle - angles[0]);
+
+    for (let i = 1; i < angles.length; i++) {
+      const difference = Math.abs(angle - angles[i]);
+      if (difference < minDifference) {
+        minDifference = difference;
+        closestAngle = angles[i];
+      }
+    }
+
+    const length = Math.hypot(dx, dy);
+    const adjustedX = start.x + length * Math.cos(closestAngle);
+    const adjustedY = start.y + length * Math.sin(closestAngle);
+
+    return { x: adjustedX, y: adjustedY };
+  }
+
   draw() {
     let index;
     for (index = 0; index < this.points.length - 1; index++) {
-      const label = "C" + (index + this.pipeStart);
       const start = this.points[index];
-      const end = this.points[index + 1];
+      let end = this.points[index + 1];
+      const adjustedEnd = this.adjustToNearestAngle(start, end);
+
+      const dist = Math.hypot(adjustedEnd.x - start.x, adjustedEnd.y - start.y);
+
+      if (dist > maxLineLength) {
+        const ratio = maxLineLength / dist;
+        adjustedEnd.x = start.x + (adjustedEnd.x - start.x) * ratio;
+        adjustedEnd.y = start.y + (adjustedEnd.y - start.y) * ratio;
+      }
+
+      end.x = adjustedEnd.x;
+      end.y = adjustedEnd.y;
+
+      const label = "C" + (index + this.pipeStart);
       const midX = (start.x + end.x) / 2;
       const midY = (start.y + end.y) / 2;
       this.drawTriangle(midX, midY, triangleSize);
       this.drawLine(start, end);
     }
+  }
+
+  hitNode(coord) {
+    return this.isPointOnLineSegment(coord, this.inicio, this.fin);
+  }
+
+  isPointOnLineSegment(point, start, end) {
+    const threshold = 5; // Allowable distance in pixels to be considered "on the line"
+    const distToStart = Math.hypot(point.x - start.x, point.y - start.y);
+    const distToEnd = Math.hypot(point.x - end.x, point.y - end.y);
+    const lineLength = Math.hypot(end.x - start.x, end.y - start.y);
+
+    // Check if the point is within the threshold distance of the line segment
+    return (
+      distToStart + distToEnd >= lineLength - threshold &&
+      distToStart + distToEnd <= lineLength + threshold
+    );
   }
 }

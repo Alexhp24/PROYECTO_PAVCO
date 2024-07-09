@@ -34,13 +34,42 @@ $(document).ready(function () {
       }
     );
   }
+
+  const myButton = document.getElementById("guardardata");
+myButton.addEventListener("click", function () {
+  const table = document.getElementById("datatuberiasaccesorios");
+  const rows = table.querySelectorAll("tbody tr");
+
+  let data = [];
+  rows.forEach(row => {
+    const numero = row.querySelector("th[scope=row]").innerText.trim();
+    const accesorios = row.querySelector("td button").innerText.trim();
+    const cantidad = row.querySelector("td span").innerText.trim();
+
+    data.push({
+      Numero: numero,
+      Accesorios: accesorios,
+      Cantidad: cantidad
+    });
+  });
+
+  console.log(data); // Verifica los datos antes de convertir a JSON
+
+  const DATAFORMATTER = JSON.stringify(data);
+  console.log(DATAFORMATTER);
+});
+
+
+
+
+  /*
   const data = document.getElementById("datatuberiasaccesorios");
   console.log(data)
   const myButton = document.getElementById("guardardata");
   myButton.addEventListener("click", function () {
     const DATAFORMATTER= JSON.stringify(data);
     console.log(DATAFORMATTER)
-  });
+    */
 
 
 });
