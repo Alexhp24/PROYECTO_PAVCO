@@ -1,9 +1,9 @@
 <?php
 session_start();
-/* if ($_SESSION['roles_designado'] == 1 || $_SESSION['roles_designado'] == 2) {
+if ($_SESSION['roles_designado'] == 1 || $_SESSION['roles_designado'] == 2) {
   include_once "assets/views/header.php";
-  include_once "assets/views/nav.php"; */
-if (true) {
+  include_once "assets/views/nav.php"; 
+/*if (true) {*/
 ?>
   <!DOCTYPE html>
   <html lang="spn">
@@ -25,6 +25,9 @@ if (true) {
       <section class="content-header">
         <div class="container-fluid">
         </div><!-- /.container-fluid -->
+        <div>
+          <h1>UDH</h1>
+        </div>
       </section>
       <section>
         <div class="container-fluid">
@@ -40,9 +43,12 @@ if (true) {
                   <ul class="dropdown-menu">
                     <button class="btn btn-primary" id="savePdf">Pdf</button>
                     <button class="btn btn-primary" id="save-img">Img</button>
+                    
                   </ul>
                   <label class="btn btn-primary" for="fileInput">Subir Archivo</label>
                   <input type="file" id="fileInput" accept="application/pdf" style="display:none;">
+
+                  <button class="btn btn-primary" id="guardardata">guardar</button>
                 </div>
                 <div class="row">
                   <!-- Planos -->
@@ -59,7 +65,7 @@ if (true) {
                             agua
                           </button>
                           <ul class="dropdown-menu">
-                            <table class="table table-hover table-responsive table-bordered">
+                            <table class="table table-hover table-responsive table-bordered" id="datatuberiasaccesorios">
                               <thead class="text-center">
                                 <tr>
                                   <th scope="col" colspan="3">Agua</th>
@@ -249,3 +255,4 @@ if (true) {
   header('Location: ./index.php');
 }
 ?>
+<script src="assets/js/proyect.js"></script>

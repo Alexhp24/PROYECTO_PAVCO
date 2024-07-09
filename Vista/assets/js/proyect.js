@@ -18,13 +18,14 @@ $(document).ready(function () {
           template += `
                 <div class="col-lg-3 col-6">
                     <div class="card text-center">
-                        <div class="card-header bg-primary">${proyecto.nombre_proyecto}</div>
-                        <div class="card-body">
+                        <div class="card-header bg-primary">${proyecto.id_proyecto}</div>
+                        <div class="card-body">                     
+                            <p> <strong>Nombre: </strong> ${proyecto.nombre_proyecto}</p>
                             <p> <strong>Fecha: </strong> ${proyecto.fecha}</p>
                             <p> <strong>Tipo de proyecto: </strong> ${proyecto.tipo_sanitario}</p>
                         </div>
                         <div class="card-footer">
-                            <a class="btn btn-outline-primary" href="adm_pavco_cad.php?id_valorizacion=${proyecto.id_proyecto}">Abrir Valorización</a>
+                            <a class="btn btn-outline-primary" href="adm_pavco_cad.php?id_valorizacion=${proyecto.id_proyecto}?nombre=${proyecto.nombre_proyecto}">Abrir pvc</a>
                         </div>
                     </div>
                 </div>`;
@@ -33,4 +34,13 @@ $(document).ready(function () {
       }
     );
   }
+  const data = document.getElementById("datatuberiasaccesorios");
+  console.log(data)
+  const myButton = document.getElementById("guardardata");
+  myButton.addEventListener("click", function () {
+    const DATAFORMATTER= JSON.stringify(data);
+    console.log(DATAFORMATTER)
+  });
+
+
 });

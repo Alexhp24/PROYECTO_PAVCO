@@ -13,6 +13,7 @@ if ($_SESSION['roles_designado'] == 1 || $_SESSION['roles_designado'] == 2) {
         <div class="text-center">
           <h1 class="text-center">BIENVENIDO PAVCO</h1>
         </div>
+        
       </div><!-- /.container-fluid -->
     </section>
     <section>
