@@ -1,24 +1,38 @@
 import { getMousePos } from "./utils.js";
+import { Node } from "./node.js";
 
 // Definir las longitudes de las líneas
 export class SingleShapeBase {
   constructor(canvas, color) {
-    this.lastPoint = { x: 0, y: 0, parent: this };
+    this.lastPoint = null;
     this.color = color;
     this.canvas = canvas;
     this.rotation = 0;
     this.ctx = canvas.getContext("2d");
     this.isDone = false;
-    this.registerYourself();
   }
 
   done() {
-    this.removeYourself();
-    return this.isDone;
+    return this.lastPoint;
   }
 
   canBeDone() {
     return this.isDone;
+  }
+
+  getNextNode(coord) {
+    let node;
+    if (coord instanceof Node) {
+      node = coord;
+    } else {
+      node = new Node(coord, this.canvas, this.color);
+    }
+    this.lastPoint = node;
+    if (coord instanceof Node) {
+      return null;
+    } else {
+      return node;
+    }
   }
 
   // Verificar si el clic está sobre la forma Y

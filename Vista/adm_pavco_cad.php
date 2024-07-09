@@ -1,9 +1,9 @@
 <?php
 session_start();
-if ($_SESSION['roles_designado'] == 1 || $_SESSION['roles_designado'] == 2) {
+/* if ($_SESSION['roles_designado'] == 1 || $_SESSION['roles_designado'] == 2) {
   include_once "assets/views/header.php";
-  include_once "assets/views/nav.php"; 
-/*if (true) {*/
+  include_once "assets/views/nav.php";  */
+if (true) {
 ?>
   <!DOCTYPE html>
   <html lang="spn">

@@ -95,27 +95,30 @@ document
   .addEventListener("click", function (event) {
     tmpShape = new TuboFria(canvas, 0);
     selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
-    /* selectedNode = tmpShape.getNextNode(getMousePos(canvas, event)); */
   });
 
 document
   .getElementById("toggleHotPipe")
   .addEventListener("click", function (event) {
     tmpShape = new TuboCaliente(canvas, 0);
+    selectedNode = new Node(getMousePos(canvas, event), canvas, "red");
   });
 
 //TUBOS DE DESAGUE
 document.getElementById("tubo02").addEventListener("click", function (event) {
   tmpShape = new Tubo04(canvas, "pink", 0);
+  selectedNode = new Node(getMousePos(canvas, event), canvas, "pink");
 });
 
 document.getElementById("tubo04").addEventListener("click", function (event) {
   tmpShape = new Tubo02(canvas, "orange", 0);
+  selectedNode = new Node(getMousePos(canvas, event), canvas, "orange");
 });
 
 // ACCESORIO DE  AGUA
 document.getElementById("toggleY").addEventListener("click", function (event) {
   tmpShape = new CodoY(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
 
 document.getElementById("toggleX").addEventListener("click", function (event) {
@@ -261,14 +264,7 @@ function getContainerFor(type) {
 function updateCount(shape) {
   const type = shape.constructor.name;
   const container = getContainerFor(type);
-  let count = 0;
-  if (shape instanceof Tubo) {
-    count = container.reduce((acc, tubo) => {
-      return acc + tubo.points.length;
-    }, 0);
-  } else {
-    count = container.length;
-  }
+  let count = container.length;
   document.getElementById(type).textContent = count;
 }
 
@@ -279,9 +275,10 @@ function addShape() {
     container.push(tmpShape);
     shapes.push(tmpShape);
     updateCount(tmpShape);
-    if (type === "TuboFria") {
-      tmpShape = new TuboFria(canvas, 0);
-      const node = tmpShape.getNextNode(nodes[nodes.length - 1]);
+    if (tmpShape instanceof Tubo) {
+      const lastNode = tmpShape.fin;
+      tmpShape = new tmpShape.constructor(canvas, 0);
+      const node = tmpShape.getNextNode(lastNode);
       selectedNode = tmpShape.getNextNode({ x: node.x, y: node.y });
       return;
     }
@@ -322,12 +319,14 @@ canvas.addEventListener("mouseup", function (event) {
       return node.hitNode(selectedNode);
     });
     if (hitNode) {
-      tmpShape.getNextNode(hitNode);
+      selectedNode  = tmpShape.getNextNode(hitNode);
     } else {
       nodes.push(selectedNode);
       selectedNode = tmpShape.getNextNode(selectedNode);
     }
-    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+    if (selectedNode) {
+      selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+    }
 
     if (!selectedNode) {
       addShape();
