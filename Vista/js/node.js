@@ -7,7 +7,7 @@ export class Node {
     this.y = coord.y;
     this.color = color;
     this.canvas = canvas;
-    this.ctx = canvas.getContext("2d");
+    this.ctx = canvas.getContext("2d"); 
   }
   hitNode(mouse) {
     const dist = Math.hypot(mouse.x - this.x, mouse.y - this.y);
@@ -20,10 +20,10 @@ export class Node {
     this.ctx.lineWidth = 1;
     this.ctx.stroke();
     this.ctx.closePath();
-
+/*
     this.ctx.font = "7px Arial";
     this.ctx.fillStyle = "black";
-    this.ctx.fillText(label, x + circleSize + 2, y - circleSize - 2);
+    this.ctx.fillText(label, x + circleSize + 2, y - circleSize - 2); */
   }
   draw() {
     this.drawCircle(this.x, this.y);

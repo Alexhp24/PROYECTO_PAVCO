@@ -2,7 +2,7 @@ import { Node } from "./node.js";
 
 const circleSize = 4;
 const triangleSize = 10; // Tamaño fijo del triángulo
-const maxLineLength = 50 * 3.77953; // Maximum line length in pixels (50 mm convertido a píxeles)
+const maxLineLength = 80 * 3.77953; // Maximum line length in pixels (50 mm convertido a píxeles)
 
 export class Tubo {
   inicio = null;
@@ -10,8 +10,9 @@ export class Tubo {
   points = [];
   initialMove = true;
 
-  constructor(canvas, color, pipeStart) {
+  constructor(canvas, color, pipeStart, nombre) {
     this.pipeStart = pipeStart;
+    this.nombre = nombre;
     this.color = color;
     this.canvas = canvas;
     this.ctx = canvas.getContext("2d");
@@ -72,6 +73,12 @@ export class Tubo {
     this.ctx.lineWidth = 1.5;
     this.ctx.stroke();
     this.ctx.closePath();
+
+    const midX = (start.x + end.x) / 2;
+    const midY = (start.y + end.y) / 2;
+    this.ctx.font = '7.5px Arial';
+    this.ctx.fillStyle = "black";
+    this.ctx.fillText(this.nombre, midX, midY);
   }
 
   adjustToNearestAngle(start, end) {
@@ -127,7 +134,7 @@ export class Tubo {
       end.x = adjustedEnd.x;
       end.y = adjustedEnd.y;
 
-      const label = "C" + (index + this.pipeStart);
+      /*const label = "C" + (index + this.pipeStart);*/
       const midX = (start.x + end.x) / 2;
       const midY = (start.y + end.y) / 2;
       this.drawTriangle(midX, midY, triangleSize);
@@ -144,7 +151,7 @@ export class Tubo {
     const distToStart = Math.hypot(point.x - start.x, point.y - start.y);
     const distToEnd = Math.hypot(point.x - end.x, point.y - end.y);
     const lineLength = Math.hypot(end.x - start.x, end.y - start.y);
-
+ 
     // Check if the point is within the threshold distance of the line segment
     return (
       distToStart + distToEnd >= lineLength - threshold &&

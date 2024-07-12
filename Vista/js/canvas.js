@@ -106,30 +106,30 @@ function renderPDF() {
 //TUBOS DE AGUA
 document
   .getElementById("toggleColdPipe").addEventListener("click", function (event) {
-    tmpShape = new TuboFria(canvas, 0);
+    tmpShape = new TuboFria(canvas, 0, event.target.textContent);
     selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
   });
 // NUEVOS 
 document
   .getElementById("toggle34").addEventListener("click", function (event) {
-    tmpShape = new Tubo34(canvas, 0);
+    tmpShape = new Tubo34(canvas, 0,event.target.textContent);
     selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
   });
   document
   .getElementById("toggle112").addEventListener("click", function (event) {
-    tmpShape = new Tubo112(canvas, 0);
+    tmpShape = new Tubo112(canvas, 0,event.target.textContent );
     selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
   });
   document
   .getElementById("toggle114").addEventListener("click", function (event) {
-    tmpShape = new Tubo114(canvas, 0);
+    tmpShape = new Tubo114(canvas, 0,event.target.textContent );
     selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
   });
  
 document
 .getElementById("toggleHotPipe")
 .addEventListener("click", function (event) {
-  tmpShape = new TuboCaliente(canvas, 0);
+  tmpShape = new TuboCaliente(canvas, 0 , event.target.textContent);
   selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
 });
 
@@ -347,7 +347,7 @@ function addShape() {
     updateCount(tmpShape);
     if (tmpShape instanceof Tubo) {
       const lastNode = tmpShape.fin;
-      tmpShape = new tmpShape.constructor(canvas, 0);
+      tmpShape = new tmpShape.constructor(canvas, 0, tmpShape.nombre);
       const node = tmpShape.getNextNode(lastNode);
       selectedNode = tmpShape.getNextNode({ x: node.x, y: node.y });
       return;
