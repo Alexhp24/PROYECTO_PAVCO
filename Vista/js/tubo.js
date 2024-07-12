@@ -69,7 +69,7 @@ export class Tubo {
     this.ctx.moveTo(start.x, start.y);
     this.ctx.lineTo(end.x, end.y);
     this.ctx.strokeStyle = this.color;
-    this.ctx.lineWidth = 1;
+    this.ctx.lineWidth = 1.5;
     this.ctx.stroke();
     this.ctx.closePath();
   }

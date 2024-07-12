@@ -10,6 +10,10 @@ import { ReguistroBronce } from "./desague/ReguistroBronce.js";
 import { CajaReguistro } from "./desague/CajaReguistro.js";
 import { CodoCrusesDes } from "./desague/CodoCrusesDes.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
+/*
+import { Tubo3_4 } from "./desague/Tubo3_4.js";
+import { TeeSanitario } from "./desague/TeeSanitario.js";
+import { TeeSanitario } from "./desague/TeeSanitario.js"; */
 
 //DESAGUE
 import { Tubo02 } from "./desague/Tubo02.js";
@@ -36,6 +40,12 @@ import { Codo90 } from "./agua/codo90.js";
 
 import { Node } from "./node.js";
 
+import { Tubo34 } from "./agua/tubo3_4.js";
+import { Tubo112 } from "./agua/tubo11_2.js";
+import { Tubo114 } from "./agua/tubo11_4.js";
+
+
+////
 const fileInput = document.getElementById("fileInput");
 const canvas = document.getElementById("pdfCanvas");
 
@@ -91,18 +101,34 @@ function renderPDF() {
 
 //TUBOS DE AGUA
 document
-  .getElementById("toggleColdPipe")
-  .addEventListener("click", function (event) {
+  .getElementById("toggleColdPipe").addEventListener("click", function (event) {
     tmpShape = new TuboFria(canvas, 0);
     selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
   });
-
+// NUEVOS 
 document
-  .getElementById("toggleHotPipe")
-  .addEventListener("click", function (event) {
-    tmpShape = new TuboCaliente(canvas, 0);
-    selectedNode = new Node(getMousePos(canvas, event), canvas, "red");
+  .getElementById("toggle34").addEventListener("click", function (event) {
+    tmpShape = new Tubo34(canvas, 0);
+    selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
   });
+  document
+  .getElementById("toggle112").addEventListener("click", function (event) {
+    tmpShape = new Tubo112(canvas, 0);
+    selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
+  });
+  document
+  .getElementById("toggle114").addEventListener("click", function (event) {
+    tmpShape = new Tubo114(canvas, 0);
+    selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
+  });
+ 
+document
+.getElementById("toggleHotPipe")
+.addEventListener("click", function (event) {
+  tmpShape = new TuboCaliente(canvas, 0);
+  selectedNode = new Node(getMousePos(canvas, event), canvas, "blue");
+});
+
 
 //TUBOS DE DESAGUE
 document.getElementById("tubo02").addEventListener("click", function (event) {
@@ -380,8 +406,15 @@ canvas.addEventListener("mousemove", function (event) {
 });
 
 canvas.addEventListener("dblclick", function (event) {
-  if (selectedNode) {
-    selectedNode.parent.rotate(event);
+  const hitShape = shapes.find(function (shape) {
+    if (shape instanceof Tubo) {
+      return false;
+    } else {
+      return shape.hitNode(getMousePos(canvas, event));
+    }
+  });
+  if (hitShape) {
+    hitShape.rotate(event);
   }
 });
 

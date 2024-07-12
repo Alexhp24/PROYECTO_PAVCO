@@ -50,6 +50,27 @@ export class SingleShapeBase {
     return null;
   }
 
+  rotate(event) {
+    const { x, y } = getMousePos(this.canvas, event);
+    // Obtener las coordenadas relativas al punto de origen del codo
+    const relativeX = x - this.lastPoint.x;
+    const relativeY = y - this.lastPoint.y;
+
+    // Calcular las coordenadas rotadas
+    const rotatedX = relativeX * Math.cos(-this.rotation * Math.PI / 180) - relativeY * Math.sin(-this.rotation * Math.PI / 180);
+    const rotatedY = relativeX * Math.sin(-this.rotation * Math.PI / 180) + relativeY * Math.cos(-this.rotation * Math.PI / 180);
+
+      // Calcular las coordenadas ajustadas para dibujar el codo lejos del punto de clic
+      const adjustedX = this.lastPoint.x + rotatedX;
+      const adjustedY = this.lastPoint.y + rotatedY;
+
+      // Actualizar el último punto a las coordenadas ajustadas
+      this.lastPoint.x = adjustedX;
+      this.lastPoint.y = adjustedY;
+
+      this.rotation = (this.rotation + 90) % 360;
+  }
+
   registerYourself() {
     // Función para manejar el evento de doble clic
     this.rotate = (event) => {

@@ -19,15 +19,13 @@ if (true) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   </head>
-
   <body>
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <div class="container-fluid">
         </div><!-- /.container-fluid -->
-        <div>
-          <h1>UDH</h1>
+        <div id="proyectos-container" >
         </div>
       </section>
       <section>
@@ -43,8 +41,7 @@ if (true) {
                   </button>
                   <ul class="dropdown-menu">
                     <button class="btn btn-primary" id="savePdf">Pdf</button>
-                    <button class="btn btn-primary" id="save-img">Img</button>
-                    
+                    <button class="btn btn-primary" id="save-img">Img</button>                    
                   </ul>
                   <label class="btn btn-primary" for="fileInput">Subir Archivo</label>
                   <input type="file" id="fileInput" accept="application/pdf" style="display:none;">
@@ -80,76 +77,94 @@ if (true) {
                               <tbody>
                                 <tr>
                                   <th scope="row">1</th>
-                                  <td><button id="toggleColdPipe" class="btn btn-outline-primary btn-sm">Agua fria</button></td>
+                                  <td><button id="toggleColdPipe" class="btn btn-outline-primary btn-sm"> TUBO 1/2</button></td>
                                   <td><span id="TuboFria">0</span></td>
+                                </tr>          
+                                                  
+                                <tr>
+                                  <th scope="row">A</th>
+                                  <td><button id="toggle34" class="btn btn-outline-primary btn-sm"> TUBO 3/4</button></td>
+                                  <td><span id="Tubo34">0</span></td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">B</th>
+                                  <td><button id="toggle112" class="btn btn-outline-primary btn-sm"> TUBO 1 1/4</button></td>
+                                  <td><span id=" Tubo112 ">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">3</th>
+                                  <th scope="row">C</th>
+                                  <td><button id="toggle114" class="btn btn-outline-primary btn-sm"> TUBO 1 1/2</button></td>
+                                  <td><span id="Tubo114">0</span></td>
+                                </tr>
+
+                                <tr>
+                                  <th scope="row">2</th>
                                   <td><button id="toggleHotPipe" class="btn btn-outline-primary btn-sm"> Agua C</button></td>
                                   <td><span id="TuboCaliente">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">4</th>
+                                  <th scope="row">3</th>
                                   <td><button id="toggleY" class="btn btn-outline-primary btn-sm"> Codo Yee</button></td>
                                   <td><span id="CodoY">0</span> </td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">5</th>
+                                  <th scope="row">4</th>
                                   <td><button id="toggleX" class="btn btn-outline-primary btn-sm"> Codo Tee</button> </td>
                                   <td><span id="CodoT">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">6</th>
+                                  <th scope="row">5</th>
                                   <td><button id="toggle90" class="btn btn-outline-primary btn-sm"> Codo 90°</button></td>
                                   <td><span id="Codo90">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">7</th>
+                                  <th scope="row">6</th>
                                   <td><button id="toggleCA" class="btn btn-outline-primary btn-sm">Codo Arriba </button></td>
                                   <td><span id="CodoArriba">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">8</th>
+                                  <th scope="row">7</th>
                                   <td><button id="toggleCD" class="btn btn-outline-primary btn-sm">Codo Abajo</button></td>
                                   <td><span id="CodoAbajoA">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">9</th>
+                                  <th scope="row">8</th>
                                   <td><button id="toggleReduccion" class="btn btn-outline-primary btn-sm">Reduccion</button></td>
                                   <td><span id="Reduccion">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">10</th>
+                                  <th scope="row">9</th>
                                   <td><button id="toggleMontantes" class="btn btn-outline-primary btn-sm">Montantes</button> </td>
                                   <td><span id="Montantes">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">11</th>
+                                  <th scope="row">10</th>
                                   <td><button id="toggleTeeAbajo" class="btn btn-outline-primary btn-sm ">Tee Abajo</button> </td>
                                   <td><span id="TeeAbajo">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">12</th>
+                                  <th scope="row">11</th>
                                   <td><button id="toggleTeeArriba" class="btn btn-outline-primary btn-sm"> Arriba</button></td>
                                   <td><span id="TeeArriba">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">13</th>
+                                  <th scope="row">12</th>
                                   <td><button id="toggleUnionUniversal" class="btn btn-outline-primary btn-sm">UnionUniversal</button></td>
                                   <td><span id="UnionUniversal">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">14</th>
+                                  <th scope="row">13</th>
                                   <td><button id="toggleValvulaCheck" class="btn btn-outline-primary btn-sm">ValvulaCheck</button></td>
                                   <td><span id="ValvulaCheck">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">15</th>
+                                  <th scope="row">14</th>
                                   <td><button id="toggleLlaveGeneral" class="btn btn-outline-primary btn-sm">LlaveGeneral</button> </td>
                                   <td><span id="LlaveGeneral">0</span></td>
                                 </tr>
                                 <tr>
-                                  <th scope="row">16</th>
+                                  <th scope="row">15</th>
                                   <td><button id="toggleCrucesinConexion" class="btn btn-outline-primary btn-sm"> Cruces sin conexion</button></td>
                                   <td><span id="CrucesinConexion">0</span></td>
                                 </tr>
@@ -168,7 +183,7 @@ if (true) {
                             <table class="table table-hover table-responsive table-bordered">
                               <thead class="text-center">
                                 <tr>
-                                  <th scope="col" colspan="3">Desague</th>
+                                  <!-- <th scope="col" colspan="3">Desague</th> -->
                                 </tr>
                                 <tr>
                                   <th scope="col">N°</th>
