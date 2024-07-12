@@ -113,11 +113,31 @@ if (true) {
                                   <td><button id="toggleX" class="btn btn-outline-primary btn-sm"> Codo Tee</button> </td>
                                   <td><span id="CodoT">0</span></td>
                                 </tr>
+
                                 <tr>
                                   <th scope="row">5</th>
-                                  <td><button id="toggle90" class="btn btn-outline-primary btn-sm"> Codo 90°</button></td>
+                                  <td><button id="toggle90" class="btn btn-outline-primary btn-sm"> Codo  1/2</button></td>
                                   <td><span id="Codo90">0</span></td>
                                 </tr>
+                                <tr>
+                                  <th scope="row">5</th>
+                                  <td><button id="togglecodo34" class="btn btn-outline-primary btn-sm"> Codo 3/4</button></td>
+                                  <td><span id="Codo34">0</span></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">5</th>
+                                  <td><button id="togglecodo114" class="btn btn-outline-primary btn-sm"> Codo  11/4</button></td>
+                                  <td><span id="Codo114">0</span></td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">5</th>
+                                  <td><button id="togglecodo112" class="btn btn-outline-primary btn-sm"> Codo 11/2</button></td>
+                                  <td><span id="Codo112">0</span></td>
+                                </tr>
+
+                              
+
+
                                 <tr>
                                   <th scope="row">6</th>
                                   <td><button id="toggleCA" class="btn btn-outline-primary btn-sm">Codo Arriba </button></td>

@@ -15,7 +15,7 @@ import { Tubo3_4 } from "./desague/Tubo3_4.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js"; */
 
-//DESAGUE
+//agua
 import { Tubo02 } from "./desague/Tubo02.js";
 import { Tubo04 } from "./desague/Tubo04.js";
 
@@ -43,6 +43,10 @@ import { Node } from "./node.js";
 import { Tubo34 } from "./agua/tubo3_4.js";
 import { Tubo112 } from "./agua/tubo11_2.js";
 import { Tubo114 } from "./agua/tubo11_4.js";
+
+import { Codo34 } from "./agua/codo34.js";
+import { Codo114 } from "./agua/codo114.js";
+import { Codo112 } from "./agua/codo112.js";
 
 
 ////
@@ -151,11 +155,29 @@ document.getElementById("toggleX").addEventListener("click", function (event) {
   tmpShape = new CodoT(canvas, "#4C4948");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
-
+/// codos nuevos por diametro de 90
 document.getElementById("toggle90").addEventListener("click", function (event) {
   tmpShape = new Codo90(canvas, "#4C4948");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
+
+document.getElementById("togglecodo34").addEventListener("click", function (event) {
+  tmpShape = new Codo34(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("togglecodo114").addEventListener("click", function (event) {
+  tmpShape = new Codo114(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("togglecodo112").addEventListener("click", function (event) {
+  tmpShape = new Codo112(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+
+
 
 document.getElementById("toggleCA").addEventListener("click", function (event) {
   tmpShape = new CodoArriba(canvas, "#09BBD7");

@@ -4,10 +4,10 @@ import { SingleShapeBase } from "../single_shape_base.js";
 const verticalLength = 10; // Longitud ajustada para la línea vertical
 const horizontalLength = 10; // Longitud ajustada para la línea horizontal
 
-export class Codo90 extends SingleShapeBase {
-  constructor(ctx, color) {
+export class Codo34 extends SingleShapeBase {
+  constructor(ctx, color, count) {
     super(ctx, color);
-    this.label = `C°1/2`; // Asignar un número de etiqueta único a este codo
+    this.label = `C°3/4`; // Asignar un número de etiqueta único a este codo${count}
   }
   // Función para dibujar una forma L en una posición específica
   drawForm(offsetX, offsetY, label) {
