@@ -1,21 +1,22 @@
-/* Estilo para los botones de forma individual */
-.shape-button {
-  margin: 5px; /* Espaciado externo de los botones de forma */
-  padding: 10px; /* Espaciado interno de los botones de forma */
-  background-color: #f01b1b; /* Color de fondo de los botones de forma */
-  border-radius: 10px;
-  border: 1px solid #ccc; /* Borde de los botones de forma */
-  cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
-  text-align: center; /* Alinea el texto al centro */
-  width: calc(50% - 10px); /* Ancho de los botones de forma */
-  font-size: 11px; /* Tamaño de fuente de los botones de forma */
-  display: flex; /* Usar flexbox para el diseño */
-  align-items: center; /* Alinear elementos verticalmente */
+.icono-boton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
 }
 
-/* Estilo para los íconos dentro de los botones */
-.button-icon {
-  width: 120px; /* Ancho del icono */
-  height: auto; /* Altura ajustada automáticamente */
-  margin-right: 10px; /* Espacio entre el icono y el texto */
+.icono {
+  width: 32px; /* Ajusta el tamaño según tus necesidades */
+  height: 32px; /* Ajusta el tamaño según tus necesidades */
+  object-fit: cover; /* Asegura que la imagen se ajuste al tamaño especificado */
+  border-radius: 5px;
+  /*border: 2px solid #ccc;  Agrega un borde para darle apariencia de icono *
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Agrega una sombra para un efecto de relieve */
+}
+
+.icono-boton:hover .icono {
+  border-color: #888; /* Cambia el color del borde al pasar el cursor sobre el botón */
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.5); /* Aumenta la sombra al pasar el cursor sobre el botón */
 }

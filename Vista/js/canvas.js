@@ -10,6 +10,8 @@ import { ReguistroBronce } from "./desague/ReguistroBronce.js";
 import { CajaReguistro } from "./desague/CajaReguistro.js";
 import { CodoCrusesDes } from "./desague/CodoCrusesDes.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
+import { Codo45} from "./desague/Codo45.js";
+
 /*
 import { Tubo3_4 } from "./desague/Tubo3_4.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
@@ -38,6 +40,13 @@ import { LlaveGeneral } from "./agua/LlaveGeneral.js";
 import { CrucesinConexion } from "./agua/CrucesinConexion.js";
 import { Codo90 } from "./agua/codo90.js";
 
+import { Cajareguistroagua } from "./agua/Cajareguistroagua.js";
+import { Teeplanta } from "./agua/Teeplanta.js";
+import { Grifolimpieza } from "./agua/Grifolimpieza.js";
+import { Griforiego } from "./agua/Griforiego.js";
+ 
+
+
 import { Node } from "./node.js";
 
 import { Tubo34 } from "./agua/tubo3_4.js";
@@ -47,6 +56,7 @@ import { Tubo114 } from "./agua/tubo11_4.js";
 import { Codo34 } from "./agua/codo34.js";
 import { Codo114 } from "./agua/codo114.js";
 import { Codo112 } from "./agua/codo112.js";
+import { Sumidero } from "./desague/Sumidero.js";
 
 
 ////
@@ -184,6 +194,29 @@ document.getElementById("toggleCA").addEventListener("click", function (event) {
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
 
+document.getElementById("toggleGrifolimpieza").addEventListener("click", function (event) {
+  tmpShape = new Grifolimpieza(canvas, "#09BBD7");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleGriforiego").addEventListener("click", function (event) {
+  tmpShape = new Griforiego(canvas, "#09BBD7");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleTeeplanta").addEventListener("click", function (event) {
+  tmpShape = new Teeplanta(canvas, "#09BBD7");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleCajareguistroagua").addEventListener("click", function (event) {
+  tmpShape = new Cajareguistroagua(canvas, "#09BBD7");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+
+
+
 document.getElementById("toggleCD").addEventListener("click", function (event) {
   tmpShape = new CodoAbajoA(canvas, "#09BBD7");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
@@ -245,6 +278,7 @@ document
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
+
 // ACCSESORIO DE DESAGUE
 document
   .getElementById("CodoDesague_YEE")
@@ -266,7 +300,20 @@ document
     tmpShape = new Desague90(canvas, "blue");
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
-
+//sumidero corregir 
+document
+  .getElementById("CodoSumidero")
+  .addEventListener("click", function (event) {
+    tmpShape = new Sumidero(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+  });
+// codo de 45 corregir 
+document
+  .getElementById("CodoCodo45")
+  .addEventListener("click", function (event) {
+    tmpShape = new Codo45(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+  });
 document
   .getElementById("CodoMontantesDes")
   .addEventListener("click", function (event) {
