@@ -63,7 +63,7 @@ if (true) {
                             agua
                           </button>
                           <ul class="dropdown-menu">
-                            <table class="table table-hover table-responsive table-bordered" id="datatuberiasaccesorios">
+                            <table class="table-sm table-hover table-responsive table-bordered" id="datatuberiasaccesorios">
                               <thead class="text-center">
                                 <tr>
                                   <th scope="col" colspan="3">Agua</th>
@@ -227,7 +227,7 @@ if (true) {
                                 </tr>
                                 <tr>
                                   <th scope="row">15</th>
-                                  <td><button id="CodoDesague_TEE" class="btn btn-outline-primary btn-sm">Codo Tee</button></td>
+                                  <td><button id="CodoDesague_TEE" class="btn btn-outline-primary btn-sm"> DesagueTee</button> </td>
                                   <td><span id="DesagueTEE">0</span></td>
                                 </tr>
                                 <tr>
