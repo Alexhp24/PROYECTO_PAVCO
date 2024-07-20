@@ -11,7 +11,7 @@ import { CajaReguistro } from "./desague/CajaReguistro.js";
 import { CodoCrusesDes } from "./desague/CodoCrusesDes.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
 import { Codo45} from "./desague/Codo45.js";
-
+import { Sumidero } from "./desague/Sumidero.js";
 /*
 import { Tubo3_4 } from "./desague/Tubo3_4.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
@@ -25,6 +25,7 @@ import { TuboCaliente } from "./agua/tubo_caliente.js";
 import { TuboFria } from "./agua/tubo_fria.js";
 
 import { Tubo } from "./tubo.js";
+
 
 import { CodoY } from "./agua/codoY.js";
 import { CodoT } from "./agua/codoT.js";
@@ -56,7 +57,7 @@ import { Tubo114 } from "./agua/tubo11_4.js";
 import { Codo34 } from "./agua/codo34.js";
 import { Codo114 } from "./agua/codo114.js";
 import { Codo112 } from "./agua/codo112.js";
-import { Sumidero } from "./desague/Sumidero.js";
+
 
 
 ////
@@ -74,7 +75,7 @@ const pdfCtx = pdfCanvas.getContext("2d");
 const zoomInButton = document.getElementById("zoomInButton");
 const zoomOutButton = document.getElementById("zoomOutButton");
 
-let scale = 1.7;
+let scale = 1.5;
 const shapes = [];
 const nodes = [];
 const instances = {};
@@ -85,13 +86,13 @@ let pdfData = null;
 window["nodes"] = nodes;
 
 zoomInButton.addEventListener("click", function () {
-  scale += 0.1;
+  scale += 1.5;
   renderPDF();
 });
 
 zoomOutButton.addEventListener("click", function () {
-  if (scale > 0.1) {
-    scale -= 0.1;
+  if (scale > 1.5) {
+    scale -= 1.5;
     renderPDF();
   }
 });

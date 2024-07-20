@@ -1,10 +1,10 @@
-import { Node } from "./node.js";
+/*import { Node } from "./node.js";
 
 const circleSize = 4;
 const triangleSize = 10; // Tamaño fijo del triángulo
-const maxLineLength = 141 * 3.77953; // Maximum line length in pixels (50 mm convertido a píxeles)
+const maxLineLength = 70 * 3.77953; // Maximum line length in pixels (50 mm convertido a píxeles)
 
-export class Tubo {
+export class Tubodesague {
   inicio = null;
   fin = null;
   points = [];
@@ -134,7 +134,7 @@ export class Tubo {
       end.x = adjustedEnd.x;
       end.y = adjustedEnd.y;
 
-      /*const label = "C" + (index + this.pipeStart);*/
+      /*const label = "C" + (index + this.pipeStart);*
       const midX = (start.x + end.x) / 2;
       const midY = (start.y + end.y) / 2;
       this.drawTriangle(midX, midY, triangleSize);
@@ -159,3 +159,4 @@ export class Tubo {
     );
   }
 }
+*/

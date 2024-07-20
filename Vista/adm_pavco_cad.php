@@ -105,13 +105,11 @@ if (true) {
                             <div>
                               <button class="btn btn-primary" id="zoomInButton">+</button>
                               <button class="btn btn-primary" id="zoomOutButton">-</button>
-                              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Descargar
-                              </button>
-                              <ul class="dropdown-menu">
+                             
+                          
                                 <button class="btn btn-primary" id="savePdf">Pdf</button>
                                 <button class="btn btn-primary" id="save-img">Img</button>
-                              </ul>
+                      
                               <label class="btn btn-primary" for="fileInput">Subir Archivo</label>
                               <input type="file" id="fileInput" accept="application/pdf" style="display:none;">
 
@@ -143,32 +141,27 @@ if (true) {
                               <div class="row">
                                 <!--tubo 1/2-->
                                 <div class="col-2">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="Tubo 1/2" id="toggleColdPipe">
-                                    <img src="./IMG PAVCO/IMG PAVCO/icon_agua/TUBO1.ico" alt="Icono" class="icono" />
+                                  <button id="toggleColdPipe" class="btn btn-outline-sm btn-sm">TUBO 1/2
                                   </button>
                                 </div>
                                 <!--tubo3/4-->
                                 <div class="col-2">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="Tubo 3/4" id="toggle34">
-                                    <img src="./IMG PAVCO/IMG PAVCO/icon_agua/TUBO1.ico" alt="Icono" class="icono" />
+                                  <button id="toggle34" class="btn btn-outline-sm btn-sm">TUBO 3/4
                                   </button>
                                 </div>
                                 <!--tubo 1/1/2-->
                                 <div class="col-2">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="Tubo 1_1/2" id="toggle112">
-                                    <img src="./IMG PAVCO/IMG PAVCO/icon_agua/TUBO1.ico" alt="Icono" class="icono" />
+                                  <button id="toggle112" class="btn btn-outline-sm btn-sm">TUBO 1_1/2
                                   </button>
                                 </div>
                                 <!--tubo1_1/4-->
                                 <div class="col-2">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="Tubo 1_1/4" id="toggle114">
-                                    <img src="./IMG PAVCO/IMG PAVCO/icon_agua/TUBO1.ico" alt="Icono" class="icono" />
+                                  <button id="toggle114" class="btn btn-outline-sm btn-sm">TUBO 11_/4
                                   </button>
                                 </div>
                                 <!--tubo caliente-->
                                 <div class="col-2">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="Tubo caliente " id="toggleHotPipe">
-                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBOCALIENTE1.png" alt="Icono" class="icono" />
+                                  <button id="toggleHotPipe" class="btn btn-outline-sm btn-sm">TUBO C°
                                   </button>
                                 </div>
                               </div>
@@ -189,121 +182,121 @@ if (true) {
                               <div class="row">
                                 <!--CODO DE 90 SEGUN PULGADAS-->
                                 <div class="col-2 dropup">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO 1/2°" id="toggle90">
+                                  <button class="icono-boton" type="button" title="CODO 1/2°" id="toggle90">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CODO 3/4-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO 3/4°" id="togglecodo34">
+                                  <button class="icono-boton" type="button" title="CODO 3/4°" id="togglecodo34">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!---CODO 11/4-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO 1_1/2°" id="togglecodo112">
+                                  <button class="icono-boton" type="button" title="CODO 1_1/2°" id="togglecodo112">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CODO DE 11/2-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO 1_1/4°" id="togglecodo114">
+                                  <button class="icono-boton" type="button" title="CODO 1_1/4°" id="togglecodo114">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!---CODOO TE--->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO TEE°" id="toggleX">
+                                  <button class="icono-boton" type="button" title="CODO TEE°" id="toggleX">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--codo yee-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO YEE°" id="toggleY">
+                                  <button class="icono-boton" type="button" title="CODO YEE°" id="toggleY">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--MONTANTES-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="MONTANTES" id="toggleMontantes">
+                                  <button class="icono-boton" type="button" title="MONTANTES" id="toggleMontantes">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/MONTANTES.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--GRIFO LIMPÍEZA-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="GRIFO LIMPIEZA" id="toggleGrifolimpieza">
+                                  <button class="icono-boton" type="button" title="GRIFO LIMPIEZA" id="toggleGrifolimpieza">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/GRIFOLIMPIEZA.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--GRIFO DE RIEGO-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="GRIFO DE RIEGO" id="toggleGriforiego">
+                                  <button class="icono-boton" type="button" title="GRIFO DE RIEGO" id="toggleGriforiego">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/GRIFORIEGO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CRUCES DE TUBO-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="TUBO CRUCES" id="toggleCrucesinConexion">
+                                  <button class="icono-boton" type="button" title="TUBO CRUCES" id="toggleCrucesinConexion">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CRUCESTUBO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!-- CAJA MEDIDOR DE AGUA -->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title=" CAJA MEDIDOR AGUA" id="toggleCajareguistroagua">
+                                  <button class="icono-boton" type="button" title=" CAJA MEDIDOR AGUA" id="toggleCajareguistroagua">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CAJAPORTAMEDIDORAGUA.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--VALVULA DE CONTROL-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="VALVULA DE CONTROL" id="toggleLlaveGeneral">
+                                  <button class="icono-boton" type="button" title="VALVULA DE CONTROL" id="toggleLlaveGeneral">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/VALVULACONTROL.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CODO HACIA ABAJO-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO HACIA ARRIBA" id="toggleCA">
+                                  <button class="icono-boton" type="button" title="CODO HACIA ARRIBA" id="toggleCA">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOHACIABAJO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CODO HACIA ARRIBA-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO HACIA ABAJO" id="toggleCD">
+                                  <button class="icono-boton" type="button" title="CODO HACIA ABAJO" id="toggleCD">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOHACIAARRIBA.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--VALVULA CHECK DE BRONCE-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="VALVULA CHECK DE BRONCE" id="toggleValvulaCheck">
+                                  <button class="icono-boton" type="button" title="VALVULA CHECK DE BRONCE" id="toggleValvulaCheck">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/VAVULACHECK1.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--TEE HACIA ARRIBA-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="TEE HACIA ARRIBA" id="toggleTeeArriba">
+                                  <button class="icono-boton" type="button" title="TEE HACIA ARRIBA" id="toggleTeeArriba">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TEEHACIARRIBA1.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--TEE HACIA ABAJO-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="TEE HACIA ABAJO" id="toggleTeeAbajo">
+                                  <button class="icono-boton" type="button" title="TEE HACIA ABAJO" id="toggleTeeAbajo">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TEEHACIAABAJO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--UNION UNIVERSAL-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="UNION UNIVERSA" id="toggleUnionUniversal">
+                                  <button class="icono-boton" type="button" title="UNION UNIVERSA" id="toggleUnionUniversal">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/UNIONUNIVERSAL.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--REDUCCION-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="REDUCCION" id="toggleReduccion">
+                                  <button class="icono-boton" type="button" title="REDUCCION" id="toggleReduccion">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/REDUCCION.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--TEE PLANTA-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="TEE PLANTA" id="toggleTeeplanta">
+                                  <button class="icono-boton" type="button" title="TEE PLANTA" id="toggleTeeplanta">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TEEPLANTA.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
@@ -312,7 +305,7 @@ if (true) {
                           </div>
                         </div>
                       </div>
-                      <!-- seccion entradas -->
+                      <!--REPORTES  -->
                       <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                         <div class="d-flex justify-content-around">
                           <div class="form-group row">
@@ -350,13 +343,13 @@ if (true) {
                               <div class="row">
                                 <!--TUBERlA DE DESAGUE Ø2" SAL. MEDIA PRESIÓN-->
                                 <div class="col-2">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="TUBERlA DE DESAGUE Ø2 SAL. MEDIA PRESIÓN" id="tubo02">
+                                  <button class="icono-boton" type="button" title="TUBERlA DE DESAGUE Ø2 SAL. MEDIA PRESIÓN" id="tubo02">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/TUBO01.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--TUBERlA DE DESAGUE Ø4" SAL. MEDIA PRESIÓN-->
                                 <div class="col-2">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="TUBERlA DE DESAGUE Ø4 SAL. MEDIA PRESIÓN" id="tubo04">
+                                  <button class="icono-boton" type="button" title="TUBERlA DE DESAGUE Ø4 SAL. MEDIA PRESIÓN" id="tubo04">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/TUBO02.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
@@ -373,73 +366,73 @@ if (true) {
                               <div class="row">
                                 <!--CAJA DE REGISTRO DE 12" x 24"PARA EL DESAGUE PLUVIAL-->
                                 <div class="col-2 dropup">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CAJA DE REGISTRO DE 12 x 24PARA EL DESAGUE PLUVIAL" id="CodoCajaReguistro">
+                                  <button class="icono-boton" type="button" title="CAJA DE REGISTRO DE 12 x 24PARA EL DESAGUE PLUVIAL" id="CodoCajaReguistro">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CAJAREGUISTRO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--SUMIDERO DEL TIPO REJILLA (CROMADO) corregir -->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="SUMIDERO DEL TIPO REJILLA (CROMADO)" id="CodoSumidero">
+                                  <button class="icono-boton" type="button" title="SUMIDERO DEL TIPO REJILLA (CROMADO)" id="CodoSumidero">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/SUMIDEROREJILLA.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!---CRUCE DE TUBERIAS SIN CONEXION-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CRUCE DE TUBERIAS SIN CONEXION" id="CodoCodoCrusesDes">
+                                  <button class="icono-boton" type="button" title="CRUCE DE TUBERIAS SIN CONEXION" id="CodoCodoCrusesDes">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CRUCESTUBO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--REGISTRO ROSCADO DE BRONCE CROMADO.-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="REGISTRO ROSCADO DE BRONCE CROMADO" id="CodoReguistroBronce">
+                                  <button class="icono-boton" type="button" title="REGISTRO ROSCADO DE BRONCE CROMADO" id="CodoReguistroBronce">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/REGUISTROROSCADO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--YEE.-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO YEE.°" id="CodoDesague_YEE">
+                                  <button class="icono-boton" type="button" title="CODO YEE.°" id="CodoDesague_YEE">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CODO 45 A GRADOS corrregir .-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO 45 A GRADOS" id="CodoCodo45">
+                                  <button class="icono-boton" type="button" title="CODO 45 A GRADOS" id="CodoCodo45">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO45.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CODO HACIA ABAJO-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO HACIA ABAJO" id="CodoCodoAbajo">
-                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOABAJO.png" alt="Icono" class="icono" />
+                                  <button class="icono-boton" type="button" title="CODO HACIA ABAJO" id="CodoCodoAbajo">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOHACIAABAJO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!---MONTANTES.-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="MONTANTES" id="CodoMontantesDes">
+                                  <button class="icono-boton" type="button" title="MONTANTES" id="CodoMontantesDes">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/MONTANTES.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CODO HACIA ABAJO.-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO HACIA ABAJO." id="CodoCodoHciaAbajo">
-                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOHACIAABAJO.png" alt="Icono" class="icono" />
+                                  <button class="icono-boton" type="button" title="CODO HACIA ABAJO." id="CodoCodoHciaAbajo">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOABAJO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--TEE SANITARIO-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="TEE SANITARIO" id="CodoTeeSanitario">
+                                  <button class="icono-boton" type="button" title="TEE SANITARIO" id="CodoTeeSanitario">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/TEESANITARIO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!-- TEE. -->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title=" CODO TEE°" id="CodoDesague_TEE">
+                                  <button class="icono-boton" type="button" title=" CODO TEE°" id="CodoDesague_TEE">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOTEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CODO DE 90°-->
                                 <div class="col-2 position">
-                                  <button onclick="accionBoton()" class="icono-boton" type="button" title="CODO 90°" id="CodoDesague_90">
+                                  <button class="icono-boton" type="button" title="CODO 90°" id="CodoDesague_90">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
@@ -515,34 +508,34 @@ if (true) {
                     <th scope="row">1</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1/2</td>
                     <td><span id="TuboFria">0</span></td>
-                    
+
                   </tr>
 
                   <tr>
                     <th scope="row">2</th>
                     <td> <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 3/4</td>
                     <td><span id="Tubo34">0</span></td>
-                    
+
                   </tr>
 
                   <tr>
                     <th scope="row">3</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1 1/4</td>
                     <td><span id=" Tubo112 ">0</span></td>
-                   
+
                   </tr>
                   <tr>
                     <th scope="row">4</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1 1/2</td>
                     <td><span id="Tubo114">0</span></td>
-                    
+
                   </tr>
 
                   <tr>
                     <th scope="row">5</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBOCALIENTE1.png" alt="img" class="icono"> Agua C</td>
                     <td><span id="TuboCaliente">0</span></td>
-                    
+
                   </tr>
                   <tr>
                     <th scope="row">6</th>
@@ -714,80 +707,80 @@ if (true) {
                     <th scope="row">1</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/TUBO02.png" alt="img" class="icono"> Tubo </button></td>
                     <td><span id="Tubo02">0</span></td>
-                    
+
                   </tr>
                   <tr>
                     <th scope="row">1</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CAJAREGUISTRO.png" alt="img" class="icono"> CAJA DE REGISTRO DE 12" x 24"PARA EL DESAGUE PLUVIAL </button></td>
                     <td><span id="CajaReguistro">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">2</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/SUMIDEROREJILLA.png" alt="img" class="icono"> SUMIDERO DEL TIPO REJILLA (CROMADO) </button></td>
                     <td><span id="Sumidero">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CRUCESTUBO.png" alt="img" class="icono"> CRUCE DE TUBERIAS SIN CONEXION </button></td>
                     <td><span id="CodoCrusesDes">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">4</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/REGUISTROROSCADO.png" alt="img" class="icono"> REGISTRO ROSCADO DE BRONCE CROMADO </button></td>
                     <td><span id="ReguistroBronce">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">6</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOYEE.png" alt="img" class="icono"> YEE. </button></td>
                     <td><span id="DesagueYEE">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">7</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO45.png" alt="img" class="icono"> CODO 45 A GRADOS </button></td>
                     <td><span id="Codo45">0</span></td>
-                  
+
                   </tr>
 
                   <tr>
                     <th scope="row">7</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOABAJO.png" alt="img" class="icono"> CODO HACIA ABAJO </button></td>
                     <td><span id="CodoHciaAbajo">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">7</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/MONTANTES.png" alt="img" class="icono"> MONTANTES </button></td>
                     <td><span id="MontantesDes">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">7</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOHACIAABAJO.png" alt="img" class="icono"> CODO HACIA ABAJO </button></td>
                     <td><span id="CodoAbajo">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">7</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/TEESANITARIO.png" alt="img" class="icono"> TEE SANITARIO </button></td>
                     <td><span id="TeeSanitario">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">7</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOTEE.png" alt="img" class="icono"> TEE </button></td>
                     <td><span id="DesagueTEE">0</span></td>
-                  
+
                   </tr>
                   <tr>
                     <th scope="row">7</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO90.png" alt="img" class="icono"> CODO </button></td>
                     <td><span id="Desague90">0</span></td>
-                  
+
                   </tr>
                 </tbody>
               </table>
@@ -809,7 +802,7 @@ if (true) {
     <!-- PDF.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <!-- Tu archivo JavaScript personalizado -->
-    <script type="module" src="./js/canvas.js" defer></script>
+
   </body>
 
   </html>
@@ -821,4 +814,4 @@ if (true) {
   header('Location: ./index.php');
 }
 ?>
-<script src="assets/js/proyect.js"></script>
+<script type="module" src="./js/canvas.js" defer></script>

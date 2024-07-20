@@ -54,7 +54,7 @@ export class Cajareguistroagua extends SingleShapeBase {
     this.ctx.beginPath();
     this.ctx.rect(-rectWidth / 2, -rectHeight / 2, rectWidth, rectHeight);
     this.ctx.lineWidth = 1.5;
-    this.ctx.strokeStyle = 'blue'; // Color de borde azul para el rectángulo
+    this.ctx.strokeStyle = 'yellow'; // Color de borde azul para el rectángulo
     this.ctx.stroke();
 
     // Dibujar los triángulos dentro del rectángulo y pegados a la línea central
