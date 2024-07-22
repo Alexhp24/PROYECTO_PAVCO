@@ -26,8 +26,8 @@ export class Codo90 extends SingleShapeBase {
     this.ctx.lineTo(0, verticalLength);
 
     // Dibujar la línea horizontal principal de izquierda a derecha
-    this.ctx.moveTo(0, verticalLength);
-    this.ctx.lineTo(horizontalLength, verticalLength);
+    this.ctx.moveTo(0, 0);
+    this.ctx.lineTo(horizontalLength, 0);
 
     // Establecer el ancho de la línea y el color
     this.ctx.lineWidth = 4;
