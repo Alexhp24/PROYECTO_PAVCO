@@ -5,7 +5,7 @@ const verticalLength = 10; // Longitud ajustada para la línea vertical
 const horizontalLength = 10; // Longitud ajustada para la línea horizontal
 
 export class Codo34 extends SingleShapeBase {
-  constructor(ctx, color, count) {
+  constructor(ctx, color) {
     super(ctx, color);
     this.label = `C°3/4`; // Asignar un número de etiqueta único a este codo${count}
   }
@@ -26,8 +26,8 @@ export class Codo34 extends SingleShapeBase {
     this.ctx.lineTo(0, verticalLength);
 
     // Dibujar la línea horizontal principal de izquierda a derecha
-    this.ctx.moveTo(0, verticalLength);
-    this.ctx.lineTo(horizontalLength, verticalLength);
+    this.ctx.moveTo(0, 0);
+    this.ctx.lineTo(horizontalLength, 0);
 
     // Establecer el ancho de la línea y el color
     this.ctx.lineWidth = 4;

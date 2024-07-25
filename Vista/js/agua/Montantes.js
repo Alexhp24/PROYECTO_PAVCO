@@ -7,11 +7,11 @@ const verticalLineLength = 10; // Longitud de la línea vertical en mm
 
 // Clase CABAJO que extiende de SingleShapeBase
 export class Montantes extends SingleShapeBase {
-  constructor(ctx, color, count) {
+  constructor(ctx, color) {
     // Llamar al constructor de la clase padre (Codo)
     super(ctx, color);
     // Asignar una etiqueta única a este codo
-    this.label = `M${count}`;
+    this.label = `Montantes`;
 
   }
 

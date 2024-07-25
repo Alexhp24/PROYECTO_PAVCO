@@ -3,12 +3,12 @@ import { SingleShapeBase } from "../single_shape_base.js";
 
 // Clase Sumidero que extiende de SingleShapeBase
 export class Sumidero extends SingleShapeBase {
-  constructor(ctx, color, Count, options = {}) {
+  constructor(ctx, color, options = {}) {
     // Llamar al constructor de la clase padre (SingleShapeBase)
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `M${Count}`;
+    this.label = `SUMIDERO TIPO REJILLA`;
 
     // Configurar dimensiones y colores a partir de opciones o usar valores por defecto
     this.largerCircleRadius = options.largerCircleRadius || 6; // Radio del círculo más grande en mm

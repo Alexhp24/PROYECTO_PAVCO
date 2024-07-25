@@ -6,9 +6,9 @@ const horizontalLineLength = 10; // Longitud de la línea horizontal
 const horizontalLineOffset = 3; // Desplazamiento de la línea horizontal desde la punta superior del triángulo
 
 export class Reduccion extends SingleShapeBase {
-  constructor(ctx, color, count) {
+  constructor(ctx, color) {
     super(ctx, color);
-    this.label = `T${count}`;
+    this.label = `Reduccion`;
   }
   drawReduccion(x, y) {
     // Guardar el contexto actual

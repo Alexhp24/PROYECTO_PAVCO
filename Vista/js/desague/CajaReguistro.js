@@ -1,19 +1,20 @@
-
 // Importar la clase Codo desde Codo.js
 import { SingleShapeBase } from "../single_shape_base.js";
 
 // Definir constantes para las dimensiones y colores
-const rectWidth =30; // Ancho del rectángulo en mm
-const rectHeight = 15; // Altura del rectángulo en mm
+const rectWidth = 35; // Ancho del rectángulo en mm
+const rectHeight = 20; // Altura del rectángulo en mm
+const pointRadius = 1.5; // Radio de los puntos negros en mm
+const pointSpacing = 5; // Espaciado entre puntos en mm
 
 // Clase CajaReguistro que extiende de SingleShapeBase
 export class CajaReguistro extends SingleShapeBase {
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     // Llamar al constructor de la clase padre (Codo)
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `C_R${Count}`;
+    this.label = `CAJA DE REGUISTRO`;
   }
 
   // Manejar el evento de doble clic
@@ -53,12 +54,22 @@ export class CajaReguistro extends SingleShapeBase {
     this.ctx.beginPath();
     this.ctx.rect(-rectWidth / 2, -rectHeight / 2, rectWidth, rectHeight);
     this.ctx.lineWidth = 1.5;
-    this.ctx.strokeStyle = 'blue'; // Color de borde verde para el rectángulo
+    this.ctx.strokeStyle = 'blue'; // Color de borde azul para el rectángulo
     this.ctx.stroke();
 
     // Dibujar la etiqueta del codo
     this.ctx.font = "10px Arial";
     this.ctx.fillText(this.label, rectWidth / 2 + 10, -rectHeight / 2 - 10);
+
+    // Dibujar puntos negros dentro del rectángulo
+    this.ctx.fillStyle = 'black';
+    for (let px = -rectWidth / 2 + pointSpacing / 2; px < rectWidth / 2; px += pointSpacing) {
+      for (let py = -rectHeight / 2 + pointSpacing / 2; py < rectHeight / 2; py += pointSpacing) {
+        this.ctx.beginPath();
+        this.ctx.arc(px, py, pointRadius, 0, 2 * Math.PI);
+        this.ctx.fill();
+      }
+    }
 
     // Restaurar el estado del contexto
     this.ctx.restore();
@@ -74,6 +85,4 @@ export class CajaReguistro extends SingleShapeBase {
     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
     instances.forEach(instance => instance.draw());
   }
-
-
 }

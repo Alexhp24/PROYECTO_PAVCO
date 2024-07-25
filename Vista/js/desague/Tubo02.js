@@ -1,7 +1,7 @@
 import { Tubo } from "../tubo.js";
 export class Tubo02 extends Tubo {
-  constructor(canvas, pipeStart) {
-    super(canvas, "orange", pipeStart);
+  constructor(canvas, pipeStart,nombre) {
+    super(canvas, "#F06150", pipeStart,nombre);
   }
 }
 

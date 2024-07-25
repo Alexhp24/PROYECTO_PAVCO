@@ -7,9 +7,9 @@ export class DesagueTEE extends SingleShapeBase {
   static labelCount = 0;
   static totalCount = 0;
 
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     super(ctx, color);
-    this.label = `T${++Count}`;
+    this.label = `TEE`;
   }
 
   // Función para manejar el doble clic
@@ -67,7 +67,7 @@ export class DesagueTEE extends SingleShapeBase {
     this.ctx.moveTo(verticalStartX - 3, verticalStartY);
     this.ctx.lineTo(verticalStartX + 3, verticalStartY);
 
-    this.ctx.lineWidth = 4;
+    this.ctx.lineWidth = 2.5;
     this.ctx.strokeStyle = this.color;
 
     this.ctx.stroke();

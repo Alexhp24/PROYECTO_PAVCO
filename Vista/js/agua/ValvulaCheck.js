@@ -1,6 +1,6 @@
 import { SingleShapeBase } from "../single_shape_base.js";
 
-const lineLength = 100; // Longitud de la línea en mm
+const lineLength = 40; // Longitud de la línea en mm
 const largerCircleRadius = 8; // Radio del círculo más grande en mm
 const triangleSideLength = 9.5; // Longitud de cada lado del triángulo en mm
 const verticalLineLength = 10; // Longitud de las líneas verticales en mm

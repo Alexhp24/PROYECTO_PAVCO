@@ -7,9 +7,9 @@ const verticalLineHeight = 10; // Altura de las líneas verticales en los extrem
 const crossVerticalLineHeight = 7; // Altura de la línea vertical que forma la cruz
 
 export class LlaveGeneral extends SingleShapeBase {
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     super(ctx, color);
-    this.label = `T${Count}`;
+    this.label = `Llave General`;
   }
 
   drawReduccion(x, y) {

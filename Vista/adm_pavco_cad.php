@@ -106,15 +106,13 @@ if (true) {
                         <div class="card" style="margin-left: -1.2rem; margin-top: -1.7rem">
                           <div class="card-body d-flex justify-content-around">
                             <div>
-                              <button class="btn btn-sm" id="zoomInButton"><i class="ri-zoom-in-line"></i></button>
-                              <button class="btn btn-sm" id="zoomOutButton"><i class="ri-zoom-out-line"></i></button>
-                              <button  class="btn btn-sm" id="savePdf"><i class="fa-solid fa-file-pdf"></i></button>
-                              <button class="btn btn-sm" id="guardardata"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+                              <button class="btn btn-sm" id="zoomInButton" title="ZOOM (+)"><i class="ri-zoom-in-line" style="font-size: 24PX;"></i></button>
+                              <button class="btn btn-sm" id="zoomOutButton" title="ZOOM (-)"><i class="ri-zoom-out-line" style="font-size: 24px;"></i></button>                              <button class="btn btn-sm" id="save-img" title="Descargar img"><i class="fa-solid fa-file-image" style=" font-size: 20px;"></i></button>
+                              <button class="btn btn-sm" id="savePdf" title="Desgargar PDF"><i class="fa-solid fa-file-pdf" style="font-size: 20px;"></i></button>
+                              <button class="btn btn-sm" id="guardardata" title="Guardar base de datos"> <i class="fas fa-download" style="font-size: 20px;"></i></button>
 
-                              <button class="btn btn-sm" id="save-img"><i class="fa-solid fa-file-image" style="color: #0ff40b;"></i>
-                                Img</button>
-                              <label class="btn btn-sm" for="fileInput"> <i class="fa-solid fa-file-pdf"></i></label>
-                              <input type="file" id="fileInput" accept="application/pdf" style="display:none;">          
+                              <label class="btn btn-sm" for="fileInput" title="Nuevo"> <i class="fa-solid fa-file" style="font-size: 26px;"></i></label>
+                              <input type="file" id="fileInput" accept="application/pdf" style="display:none;">
                             </div>
                           </div>
                         </div>
@@ -255,13 +253,13 @@ if (true) {
                                 </div>
                                 <!--CODO HACIA ABAJO-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="CODO HACIA ARRIBA" id="toggleCA">
+                                  <button class="icono-boton" type="button" title="CODO HACIA ARRIBA" id="toggleCD">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOHACIABAJO.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--CODO HACIA ARRIBA-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="CODO HACIA ABAJO" id="toggleCD">
+                                  <button class="icono-boton" type="button" title="CODO HACIA ABAJO" id="toggleCA">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOHACIAARRIBA.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
@@ -344,14 +342,12 @@ if (true) {
                               <div class="row">
                                 <!--TUBERlA DE DESAGUE Ø2" SAL. MEDIA PRESIÓN-->
                                 <div class="col-2">
-                                  <button class="icono-boton" type="button" title="TUBERlA DE DESAGUE Ø2 SAL. MEDIA PRESIÓN" id="tubo02">
-                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/TUBO01.png" alt="Icono" class="icono" />
+                                  <button  class="btn btn-outline-sm btn-sm" type="button" title="TUBERlA DE DESAGUE Ø4 SAL. MEDIA PRESIÓN" id="tubo02">TUBO Ø4 SAL. M-P
                                   </button>
                                 </div>
                                 <!--TUBERlA DE DESAGUE Ø4" SAL. MEDIA PRESIÓN-->
                                 <div class="col-2">
-                                  <button class="icono-boton" type="button" title="TUBERlA DE DESAGUE Ø4 SAL. MEDIA PRESIÓN" id="tubo04">
-                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/TUBO02.png" alt="Icono" class="icono" />
+                                  <button class="btn btn-outline-sm  btn-sm" type="button" title="TUBERlA DE DESAGUE Ø2 SAL. MEDIA PRESIÓN" id="tubo04">TUBO Ø2 SAL. M-P
                                   </button>
                                 </div>
                               </div>

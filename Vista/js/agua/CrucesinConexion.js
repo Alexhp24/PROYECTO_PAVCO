@@ -9,11 +9,11 @@ const verticalLineLength = 25; // Longitud de la línea vertical en mm
 // Clase CABAJO que extiende de SingleShapeBase
 export class CrucesinConexion extends SingleShapeBase {
   // Variables de clase para contar instancias y etiquetas
-  constructor(ctx, color, Count) {
+  constructor(ctx, color ) {
     // Llamar al constructor de la clase padre (Codo)
     super(ctx, color);
     // Asignar una etiqueta única a este codo
-    this.label = `C,A${Count}`;
+    this.label = `CRUCES SIN CONEXION`;
   }
 
   // Dibujar las líneas con el semicírculo en el centro de la línea horizontal
@@ -35,7 +35,7 @@ export class CrucesinConexion extends SingleShapeBase {
     this.ctx.beginPath();
     this.ctx.moveTo(0, startY);
     this.ctx.lineTo(0, endY);
-    this.ctx.lineWidth = 1.5;
+    this.ctx.lineWidth = 2.5;
     this.ctx.strokeStyle = this.color;
     this.ctx.stroke();
 
@@ -45,14 +45,14 @@ export class CrucesinConexion extends SingleShapeBase {
     this.ctx.lineTo(-circleRadius, 0);
     this.ctx.moveTo(circleRadius, 0);
     this.ctx.lineTo(endX, 0);
-    this.ctx.lineWidth = 1.5;
+    this.ctx.lineWidth = 2.5;
     this.ctx.strokeStyle = '#09BBD7';
     this.ctx.stroke();
 
     // Dibujar el semicírculo en el centro de la línea horizontal
     this.ctx.beginPath();
     this.ctx.arc(0, 0, circleRadius, 0, Math.PI, true); // Dibuja la mitad superior del círculo
-    this.ctx.lineWidth = 1.5;
+    this.ctx.lineWidth = 3;
     this.ctx.strokeStyle = '#09BBD7'; // Color de borde verde para el semicírculo
     this.ctx.stroke();
 

@@ -143,18 +143,18 @@ document
 
 //TUBOS DE DESAGUE
 document.getElementById("tubo02").addEventListener("click", function (event) {
-  tmpShape = new Tubo04(canvas, "pink", 0);
-  selectedNode = new Node(getMousePos(canvas, event), canvas, "pink");
+  tmpShape = new Tubo04(canvas, 0, event.target.textContent);
+  selectedNode = new Node(getMousePos(canvas, event), canvas, "#C09849");
 });
 
 document.getElementById("tubo04").addEventListener("click", function (event) {
-  tmpShape = new Tubo02(canvas, "orange", 0);
-  selectedNode = new Node(getMousePos(canvas, event), canvas, "orange");
+  tmpShape = new Tubo02(canvas, 0, event.target.textContent);
+  selectedNode = new Node(getMousePos(canvas, event), canvas, "#F06150");
 });
 
 // ACCESORIO DE  AGUA
 document.getElementById("toggleY").addEventListener("click", function (event) {
-  tmpShape = new CodoY(canvas, "red");
+  tmpShape = new CodoY(canvas, "orange");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
 
@@ -218,7 +218,7 @@ document
 document
   .getElementById("toggleCajareguistroagua")
   .addEventListener("click", function (event) {
-    tmpShape = new Cajareguistroagua(canvas, "#09BBD7");
+    tmpShape = new Cajareguistroagua(canvas, "yellow");
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
@@ -287,14 +287,14 @@ document
 document
   .getElementById("CodoDesague_YEE")
   .addEventListener("click", function (event) {
-    tmpShape = new DesagueYEE(canvas, "blue");
+    tmpShape = new DesagueYEE(canvas, "blue"); 
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
 document
   .getElementById("CodoDesague_TEE")
   .addEventListener("click", function (event) {
-    tmpShape = new DesagueTEE(canvas, "orange");
+    tmpShape = new DesagueTEE(canvas, "blue");
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
@@ -363,7 +363,7 @@ document
 document
   .getElementById("CodoTeeSanitario")
   .addEventListener("click", function (event) {
-    tmpShape = new TeeSanitario(canvas, "blue");
+    tmpShape = new TeeSanitario(canvas, "orange");
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
@@ -448,11 +448,17 @@ canvas.addEventListener("mouseup", function (event) {
       });
       nodes.push(selectedNode);
       selectedNode = tmpShape.getNextNode(selectedNode);
-      if (hitLine) {
+      /* if (hitLine) {
+        const oldSelected = new Node(selectedNode, canvas, "blue");
         tmpShape.getNextNode(hitLine.fin);
-      } else {
-        
-      }
+        addShape();
+        selectedNode = oldSelected;
+        deleteShape(hitLine);
+        tmpShape = new TuboFria(canvas, 0, "");
+        tmpShape.getNextNode(hitLine.inicio);
+        selectedNode = tmpShape.getNextNode(selectedNode);
+        deleteShape(hitLine);
+      } */
     }
     if (selectedNode) {
       selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));

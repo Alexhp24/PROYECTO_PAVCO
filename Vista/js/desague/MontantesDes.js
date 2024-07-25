@@ -3,16 +3,16 @@ import { SingleShapeBase } from "../single_shape_base.js";
 
 // Definir constantes para las dimensiones y colores
 const largerCircleRadius = 6; // Radio del círculo más grande en mm
-const verticalLineLength = 10; // Longitud de la línea vertical en mm
+const verticalLineLength = 15; // Longitud de la línea vertical en mm
 
 // Clase CABAJO que extiende de SingleShapeBase
 export class MontantesDes extends SingleShapeBase {
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     // Llamar al constructor de la clase padre (Codo)
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `M${Count}`;
+    this.label = `MOMTANTES`;
   }
 
   // Manejar el evento de doble clic
@@ -64,8 +64,8 @@ export class MontantesDes extends SingleShapeBase {
     // Dibujar el círculo más grande sin relleno
     this.ctx.beginPath();
     this.ctx.arc(circleX, circleY, largerCircleRadius, 0, 2 * Math.PI, false);
-    this.ctx.lineWidth = 1.5;
-    this.ctx.strokeStyle = "green"; // Color de borde verde para el círculo más grande
+    this.ctx.lineWidth = 3;
+    this.ctx.strokeStyle = "#79EC1A"; // Color de borde verde para el círculo más grande
     this.ctx.stroke();
 
     // Dibujar la línea vertical cerca del círculo
@@ -77,8 +77,8 @@ export class MontantesDes extends SingleShapeBase {
     this.ctx.beginPath();
     this.ctx.moveTo(verticalLineStartX, verticalLineStartY);
     this.ctx.lineTo(verticalLineEndX, verticalLineEndY);
-    this.ctx.lineWidth = 1.5;
-    this.ctx.strokeStyle = "#09BBD7"; // Color negro para la línea vertical
+    this.ctx.lineWidth = 2.5;
+    this.ctx.strokeStyle = "#1AAFEC"; // Color negro para la línea vertical
     this.ctx.stroke();
 
     // Dibujar la etiqueta del codo

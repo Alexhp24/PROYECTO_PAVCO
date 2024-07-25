@@ -7,11 +7,11 @@ const shapeLength = 8; // Longitud de cada segmento de las formas en mm
 
 // Clase Grifolimpieza que extiende de SingleShapeBase
 export class Grifolimpieza extends SingleShapeBase {
-  constructor(ctx, color, count) {
+  constructor(ctx, color) {
     // Llamar al constructor de la clase padre (SingleShapeBase)
     super(ctx, color);
     // Asignar una etiqueta única a este codo
-    this.label = `M${count}`;
+    this.label = `Grifo de limpieza`;
   }
 
   // Dibujar el círculo y las letras T y L

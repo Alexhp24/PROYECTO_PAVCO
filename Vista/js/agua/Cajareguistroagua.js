@@ -9,12 +9,12 @@ const smallRectHeight = 4; // Altura de los rectángulos pequeños
 
 // Clase CajaReguistro que extiende de SingleShapeBase
 export class Cajareguistroagua extends SingleShapeBase {
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     // Llamar al constructor de la clase padre (Codo)
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `C_R${Count}`;
+    this.label = `Caja de Reguitro Agua`;
   }
 
   // Manejar el evento de doble clic
@@ -112,6 +112,7 @@ export class Cajareguistroagua extends SingleShapeBase {
 
     // Dibujar la etiqueta del codo
     this.ctx.font = "10px Arial";
+    this.ctx.fillStyle = "black"; 
     this.ctx.fillText(this.label, rectWidth / 2 + 10, -rectHeight / 2 - 10);
 
     // Restaurar el estado del contexto

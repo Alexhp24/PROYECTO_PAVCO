@@ -2,16 +2,16 @@
 import { SingleShapeBase } from "../single_shape_base.js";
 
 // Definir constantes para las dimensiones y colores
-const lineLength = 100; // Longitud de la línea en mm
+const lineLength = 25; // Longitud de la línea en mm
 const largerCircleRadius = 7; // Radio del círculo más grande en mm
 const verticalLineLength = 15; // Longitud de la línea vertical en mm
 
 export class CodoAbajoA extends SingleShapeBase {
-  constructor(ctx, color, count) {
+  constructor(ctx, color) {
     // Llamar al constructor de la clase padre (Codo)
     super(ctx, color);
     // Asignar una etiqueta única a este codo
-    this.label = `C,A${count}`;
+    this.label = `Codo Abajo`;
   }
   // Dibujar la línea recta con el círculo al final
   drawLineWithCircle(x, y) {
@@ -31,16 +31,16 @@ export class CodoAbajoA extends SingleShapeBase {
     this.ctx.beginPath();
     this.ctx.moveTo(startX, startY);
     this.ctx.lineTo(endX, endY);
-    this.ctx.lineWidth = 1.5;
-    this.ctx.strokeStyle = this.color;
+    this.ctx.lineWidth = 2.5;
+    this.ctx.strokeStyle = "#09BBD7";
     this.ctx.stroke();
 
 
     // Dibujar el círculo más grande sin relleno
     this.ctx.beginPath();
     this.ctx.arc(endX, endY, largerCircleRadius, 0, 2 * Math.PI, false);
-    this.ctx.lineWidth = 1.5;
-    this.ctx.strokeStyle = 'green'; // Color de borde verde para el círculo más grande
+    this.ctx.lineWidth = 2.5;
+    this.ctx.strokeStyle = '#79EC1A'; // Color de borde verde para el círculo más grande
     this.ctx.stroke();
 
     // Dibujar la línea vertical cerca del círculo
@@ -52,7 +52,7 @@ export class CodoAbajoA extends SingleShapeBase {
     this.ctx.beginPath();
     this.ctx.moveTo(verticalLineStartX, verticalLineStartY);
     this.ctx.lineTo(verticalLineEndX, verticalLineEndY);
-    this.ctx.lineWidth = 1.5;
+    this.ctx.lineWidth = 2.5;
     this.ctx.strokeStyle = '#09BBD7'; // Color negro para la línea vertical
     this.ctx.stroke();
 

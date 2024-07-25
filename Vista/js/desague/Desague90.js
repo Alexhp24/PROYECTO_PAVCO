@@ -5,9 +5,9 @@ const verticalLength = 10; // Longitud ajustada para la línea vertical
 const horizontalLength = 10; // Longitud ajustada para la línea horizontal
 
 export class Desague90 extends SingleShapeBase {
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     super(ctx, color);
-    this.label = `C${Count}`; // Asignar un número de etiqueta único a este codo
+    this.label = `CODO 90°`; // Asignar un número de etiqueta único a este codo
   }
 
   // Función para manejar el doble clic
@@ -45,8 +45,8 @@ export class Desague90 extends SingleShapeBase {
     this.ctx.lineTo(0, verticalLength);
 
     // Dibujar la línea horizontal principal de izquierda a derecha
-    this.ctx.moveTo(0, verticalLength);
-    this.ctx.lineTo(horizontalLength, verticalLength);
+    this.ctx.moveTo(0, 0);
+    this.ctx.lineTo(horizontalLength, 0);
 
     // Establecer el ancho de la línea y el color
     this.ctx.lineWidth = 4;
@@ -56,7 +56,7 @@ export class Desague90 extends SingleShapeBase {
     this.ctx.stroke();
 
     // Dibujar la etiqueta con el número de codo
-    this.ctx.font = "7px Arial";
+    this.ctx.font = "11px Arial";
     this.ctx.fillText(label, -10, verticalLength - 10);
 
     // Restaurar el contexto al estado original

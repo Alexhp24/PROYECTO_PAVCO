@@ -3,16 +3,16 @@ import { SingleShapeBase } from "../single_shape_base.js";
 
 // Definir constantes para las dimensiones y colores
 const largerCircleRadius = 6; // Radio del círculo más grande en mm
-const lineLength = 7.8; // Longitud de la línea vertical y horizontal en mm
+const lineLength = 15; // Longitud de la línea vertical y horizontal en mm
 
 // Clase CodoAbajoDes que extiende de CodoDesague
 export class ReguistroBronce extends SingleShapeBase {
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     // Llamar al constructor de la clase padre (CodoDesague)
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `M${Count}`;
+    this.label = `REGUISTRO ROSCADO DE BRONCE`;
   }
 
   // Manejar el evento de doble clic
@@ -64,8 +64,8 @@ export class ReguistroBronce extends SingleShapeBase {
     // Dibujar el círculo más grande sin relleno
     this.ctx.beginPath();
     this.ctx.arc(circleX, circleY, largerCircleRadius, 0, 2 * Math.PI, false);
-    this.ctx.lineWidth = 1.5;
-    this.ctx.strokeStyle = "green"; // Color de borde verde para el círculo más grande
+    this.ctx.lineWidth = 2.5;
+    this.ctx.strokeStyle = "#79EC1A"; // Color de borde verde para el círculo más grande
     this.ctx.stroke();
 
     // Dibujar la primera línea vertical a un lado del círculo
@@ -77,7 +77,7 @@ export class ReguistroBronce extends SingleShapeBase {
     this.ctx.beginPath();
     this.ctx.moveTo(verticalLine1StartX, verticalLine1StartY);
     this.ctx.lineTo(verticalLine1EndX, verticalLine1EndY);
-    this.ctx.lineWidth = 1.5;
+    this.ctx.lineWidth = 2.5;
     this.ctx.strokeStyle = "#09BBD7"; // Color negro para la primera línea vertical
     this.ctx.stroke();
 
@@ -90,7 +90,7 @@ export class ReguistroBronce extends SingleShapeBase {
     this.ctx.beginPath();
     this.ctx.moveTo(verticalLine2StartX, verticalLine2StartY);
     this.ctx.lineTo(verticalLine2EndX, verticalLine2EndY);
-    this.ctx.lineWidth = 1.5;
+    this.ctx.lineWidth = 2.5;
     this.ctx.strokeStyle = "#09BBD7"; // Color negro para la segunda línea vertical
     this.ctx.stroke();
 
@@ -107,8 +107,8 @@ export class ReguistroBronce extends SingleShapeBase {
     this.ctx.beginPath();
     this.ctx.moveTo(inclinedLineStartX, inclinedLineStartY);
     this.ctx.lineTo(inclinedLineEndX, inclinedLineEndY);
-    this.ctx.lineWidth = 1.5;
-    this.ctx.strokeStyle = "green"; // Color rojo para la línea inclinada
+    this.ctx.lineWidth = 2.5;
+    this.ctx.strokeStyle = "#79EC1A"; // Color rojo para la línea inclinada
     this.ctx.stroke();
 
     // Dibujar la etiqueta del codo

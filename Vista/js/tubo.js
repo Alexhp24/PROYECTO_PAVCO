@@ -2,7 +2,7 @@ import { Node } from "./node.js";
 
 const circleSize = 4;
 const triangleSize = 10; // Tamaño fijo del triángulo
-const maxLineLength = 141 * 3.77953; // Maximum line length in pixels (50 mm convertido a píxeles)
+const maxLineLength = 125 * 3.77953; // Maximum line length in pixels (50 mm convertido a píxeles)
 
 export class Tubo {
   inicio = null;

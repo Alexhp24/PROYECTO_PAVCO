@@ -2,19 +2,19 @@
 import { SingleShapeBase } from "../single_shape_base.js";
 
 // Definir constantes para las dimensiones y colores
-const lineLength = 100; // Longitud de la línea en mm
+const lineLength = 50; // Longitud de la línea en mm
 const verticalLineLengths = [15, 20, 15]; // Longitudes de las líneas verticales en mm
 const verticalLineDistances = [-5, 0, 5]; // Distancias de las líneas verticales desde el centro en mm1
 const verticalLineColors = ['#00FF00']; // Colores de las líneas verticales
 
 // Clase UnionUniversal que extiende de SingleShapeBase
 export class UnionUniversal extends SingleShapeBase {
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     // Llamar al constructor de la clase padre (Codo)
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `C,A${Count}`;
+    this.label = `Union Universal`;
   }
 
   // Dibujar la línea recta con las líneas verticales

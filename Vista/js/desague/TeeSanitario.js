@@ -7,9 +7,9 @@ export class TeeSanitario extends SingleShapeBase {
   static labelCount = 0;
   static totalCount = 0;
 
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     super(ctx, color);
-    this.label = `T${++Count}`;
+    this.label = `TEE SANITARIO`;
   }
 
   // Función para manejar el doble clic

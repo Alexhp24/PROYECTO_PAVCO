@@ -4,9 +4,9 @@ const verticalLength = 10;
 const horizontalLength = 10;
 
 export class CodoT extends SingleShapeBase {
-  constructor(ctx, color, count) {
+  constructor(ctx, color) {
     super(ctx, color);
-    this.label = `T${count}`;
+    this.label = `CODO TEE`;
   }
 
   drawT(x, y) {
@@ -41,8 +41,8 @@ export class CodoT extends SingleShapeBase {
     this.ctx.moveTo(verticalStartX - 3, verticalStartY);
     this.ctx.lineTo(verticalStartX + 3, verticalStartY);
 
-    this.ctx.lineWidth = 4;
-    this.ctx.strokeStyle = this.color;
+    this.ctx.lineWidth = 3;
+    this.ctx.strokeStyle = "blue";
 
     this.ctx.stroke();
 
