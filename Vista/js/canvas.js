@@ -446,9 +446,13 @@ canvas.addEventListener("mouseup", function (event) {
       const hitLine = shapes.filter((shape) => shape instanceof Tubo).find(function (shape) {
         return shape.hitNode(selectedNode);
       });
-      
       nodes.push(selectedNode);
       selectedNode = tmpShape.getNextNode(selectedNode);
+      if (hitLine) {
+        tmpShape.getNextNode(hitLine.fin);
+      } else {
+        
+      }
     }
     if (selectedNode) {
       selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));

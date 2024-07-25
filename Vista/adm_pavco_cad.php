@@ -108,7 +108,7 @@ if (true) {
                             <div>
                               <button class="btn btn-sm" id="zoomInButton"><i class="ri-zoom-in-line"></i></button>
                               <button class="btn btn-sm" id="zoomOutButton"><i class="ri-zoom-out-line"></i></button>
-                              <button  class="btn btn-sm" id="savePd"><i class="fa-solid fa-file-pdf"></i></button>
+                              <button  class="btn btn-sm" id="savePdf"><i class="fa-solid fa-file-pdf"></i></button>
                               <button class="btn btn-sm" id="guardardata"><i class="fa-solid fa-arrow-up-right-from-square"></i></button>
 
                               <button class="btn btn-sm" id="save-img"><i class="fa-solid fa-file-image" style="color: #0ff40b;"></i>
