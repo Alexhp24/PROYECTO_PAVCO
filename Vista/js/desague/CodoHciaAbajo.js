@@ -13,7 +13,7 @@ export class CodoHciaAbajo extends SingleShapeBase {
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `CODO HACIA ABAJO`;
+    this.label = `Codo Hacia Abajo`;
   }
 
   // Manejar el evento de doble clic

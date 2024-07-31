@@ -9,7 +9,7 @@ export class TeeSanitario extends SingleShapeBase {
 
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `TEE SANITARIO`;
+    this.label = `Tee Sanitario`;
   }
 
   // Función para manejar el doble clic

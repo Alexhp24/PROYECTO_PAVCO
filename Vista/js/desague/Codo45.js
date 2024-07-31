@@ -9,7 +9,7 @@ const diagonalOffset = lineLength * Math.sqrt(2) / 2; // Offset para el ángulo 
 export class Codo45 extends SingleShapeBase {
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `CODO DE 45°`; // Asignar un número de etiqueta único a este codo
+    this.label = `Codo de 45°`; // Asignar un número de etiqueta único a este codo
     this.rotation = 0; // Inicializar rotación a 0 grados
     this.lastPoint = { x: 0, y: 0 }; // Inicializar último punto
   }

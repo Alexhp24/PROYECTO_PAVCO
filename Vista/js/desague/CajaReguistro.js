@@ -14,7 +14,7 @@ export class CajaReguistro extends SingleShapeBase {
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `CAJA DE REGUISTRO`;
+    this.label = `Caja de Reguistro`;
   }
 
   // Manejar el evento de doble clic

@@ -6,9 +6,9 @@ const triangleSideLength = 9.5; // Longitud de cada lado del triángulo en mm
 const verticalLineLength = 10; // Longitud de las líneas verticales en mm
 
 export class ValvulaCheck extends SingleShapeBase {
-  constructor(ctx, color, Count) {
+  constructor(ctx, color) {
     super(ctx, color);
-    this.label = `V_B${Count}`;
+    this.label = `Valvula Check`;
   }
 
   drawLineWithTriangle(x, y) {

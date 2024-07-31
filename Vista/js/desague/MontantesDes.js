@@ -12,7 +12,7 @@ export class MontantesDes extends SingleShapeBase {
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `MOMTANTES`;
+    this.label = `Montantes`;
   }
 
   // Manejar el evento de doble clic

@@ -8,7 +8,7 @@ const horizontalLength = 10; // Longitud de la línea horizontal inclinada
 export class DesagueYEE extends SingleShapeBase {
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `Codo YEE`; // Asignar un número de etiqueta único a este codo
+    this.label = `Codo Yee`; // Asignar un número de etiqueta único a este codo
   }
 
   // Función para dibujar la forma Y en una posición dada

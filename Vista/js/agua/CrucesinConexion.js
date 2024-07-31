@@ -13,7 +13,7 @@ export class CrucesinConexion extends SingleShapeBase {
     // Llamar al constructor de la clase padre (Codo)
     super(ctx, color);
     // Asignar una etiqueta única a este codo
-    this.label = `CRUCES SIN CONEXION`;
+    this.label = `Cruces sin conexion`;
   }
 
   // Dibujar las líneas con el semicírculo en el centro de la línea horizontal

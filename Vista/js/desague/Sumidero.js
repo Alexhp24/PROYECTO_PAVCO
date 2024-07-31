@@ -8,7 +8,7 @@ export class Sumidero extends SingleShapeBase {
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `SUMIDERO TIPO REJILLA`;
+    this.label = `Sumidero Tipo Rejilla`;
 
     // Configurar dimensiones y colores a partir de opciones o usar valores por defecto
     this.largerCircleRadius = options.largerCircleRadius || 6; // Radio del círculo más grande en mm

@@ -9,7 +9,7 @@ export class DesagueTEE extends SingleShapeBase {
 
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `TEE`;
+    this.label = `Codo Tee`;
   }
 
   // Función para manejar el doble clic

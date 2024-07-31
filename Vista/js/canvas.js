@@ -62,6 +62,7 @@ const canvas = document.getElementById("pdfCanvas");
 const saveImg = document.querySelector("#save-img");
 const savePdf = document.querySelector("#savePdf");
 
+
 const ctx = canvas.getContext("2d");
 const pdfCanvas = document.createElement("canvas");
 const pdfCtx = pdfCanvas.getContext("2d");
@@ -514,6 +515,62 @@ saveImg.addEventListener("click", () => {
   link.click(); // clicking link to download image
 });
 
+function tableToPdfData(tableId) {
+  const table = document.getElementById(tableId);
+  const rows = table.querySelectorAll('tr');
+  const pdfData = {
+      content: [
+          {
+              table: {
+                  body: []
+              }
+          }
+      ]
+  };
+
+  rows.forEach(row => {
+      const cells = row.querySelectorAll('td, th');
+      const rowData = [];
+      cells.forEach(cell => rowData.push(cell.innerText));
+      pdfData.content[0].table.body.push(rowData);
+  });
+
+  return pdfData;
+}
+
+document.getElementById('proxtt').addEventListener('click', () => {
+  const pdfData = tableToPdfData('tabla1');
+  pdfMake.createPdf(pdfData).download('xd1.pdf');
+});
+
+document.getElementById('proyect').addEventListener('click', () => {
+  const pdfData = tableToPdfData('tabla2');
+  pdfMake.createPdf(pdfData).download('xd2.pdf');
+});
+  
+/*
+function generatePDF(tableId, pdfName) {
+  const { jsPDF } = window.jspdf;
+  const table = document.getElementById(tableId);
+
+  html2canvas(table).then(canvas => {
+      const imgData = canvas.toDataURL('image/png');
+      const doc = new jsPDF();
+
+      doc.addImage(imgData, 'PNG', 10, 10);
+      doc.save(pdfName);
+  });
+}
+
+document.getElementById('xd1').addEventListener('click', () => {
+  generatePDF('xd11', 'xd11.pdf');
+});
+
+document.getElementById('xd2').addEventListener('click', () => {
+  generatePDF('xd22', 'xd22.pdf');
+});
+*/
+/*
 savePdf.addEventListener("click", () => {
   // Importing jsPDF
   const { jsPDF } = window.jspdf;
@@ -530,7 +587,7 @@ savePdf.addEventListener("click", () => {
   // Saving the PDF with the current date as the filename
   pdf.save(`${Date.now()}.pdf`);
 });
-
+*/
 function renderLoop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(pdfCanvas, 0, 0);

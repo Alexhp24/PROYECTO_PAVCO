@@ -12,7 +12,7 @@ export class ReguistroBronce extends SingleShapeBase {
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `REGUISTRO ROSCADO DE BRONCE`;
+    this.label = `Reguistro bronce`;
   }
 
   // Manejar el evento de doble clic

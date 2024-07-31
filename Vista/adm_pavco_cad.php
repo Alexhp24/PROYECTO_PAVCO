@@ -488,7 +488,7 @@ if (true) {
               </button>
             </div>
             <div class="modal-body">
-              <table class="table-sm table-hover table-responsive table-bordered" id="datatuberiasaccesorios">
+              <table class="table-sm table-hover table-responsive table-bordered" id="tabla1">
                 <thead class="text-center">
                   <tr>
                     <th scope="col" colspan="4">Agua</th>
@@ -658,14 +658,14 @@ if (true) {
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TEEPLANTA.png" alt="img" class="icono"> TE PLANTA</button></td>
                     <td><span id="Teeplanta">0</span></td>
 
-
+      
                   </tr>
                 </tbody>
               </table>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Guardar</button>
+              <button id="proxtt" type="button" class="btn btn-primary">Guardar</button>
             </div>
           </div>
         </div>
@@ -681,7 +681,7 @@ if (true) {
               </button>
             </div>
             <div class="modal-body">
-              <table class="table-sm table-hover table-responsive table-bordered" id="datatuberiasaccesorios">
+              <table class="table-sm table-hover table-responsive table-bordered" id="tabla2">
                 <thead class="text-center">
                   <tr>
                     <th scope="col" colspan="4">DESAGUE</th>
@@ -784,7 +784,7 @@ if (true) {
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Guardar</button>
+              <button id="proyect" class="btn btn-primary">Guardar</button>
             </div>
           </div>
         </div>
@@ -799,6 +799,12 @@ if (true) {
     <!-- PDF.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <!-- Tu archivo JavaScript personalizado -->
+
+    <!---pdf--
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>--->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
+
 
   </body>
 

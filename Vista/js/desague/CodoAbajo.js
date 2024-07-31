@@ -12,7 +12,7 @@ export class CodoAbajo extends SingleShapeBase {
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `codoxd`;
+    this.label = `Codo Abajo`;
   }
 
   // Manejar el evento de doble clic

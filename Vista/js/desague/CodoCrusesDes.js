@@ -13,7 +13,7 @@ export class CodoCrusesDes extends SingleShapeBase {
     // Llamar al constructor de la clase padre (Codo)
     super(ctx, color);
     // Asignar una etiqueta única a este codo
-    this.label = `CRUCES SIN CONEXION`;
+    this.label = `Cruces sin Conexion`;
   }
 
   // Manejar el evento de doble clic
