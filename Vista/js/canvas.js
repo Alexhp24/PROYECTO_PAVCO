@@ -12,6 +12,7 @@ import { CodoCrusesDes } from "./desague/CodoCrusesDes.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
 import { Codo45 } from "./desague/Codo45.js";
 import { Sumidero } from "./desague/Sumidero.js";
+import { Codo02 } from  "./desague/Codo02.js";
 /*
 import { Tubo3_4 } from "./desague/Tubo3_4.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
@@ -303,6 +304,12 @@ document
   .getElementById("CodoDesague_90")
   .addEventListener("click", function (event) {
     tmpShape = new Desague90(canvas, "blue");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+  });
+document
+  .getElementById("CodoDesague02")
+  .addEventListener("click", function (event) {
+    tmpShape = new Codo02(canvas, "blue");
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 //sumidero corregir

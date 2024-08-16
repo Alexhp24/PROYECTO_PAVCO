@@ -107,7 +107,7 @@ if (true) {
                           <div class="card-body d-flex justify-content-around">
                             <div>
                               <button class="btn btn-sm" id="zoomInButton" title="ZOOM (+)"><i class="ri-zoom-in-line" style="font-size: 24PX;"></i></button>
-                              <button class="btn btn-sm" id="zoomOutButton" title="ZOOM (-)"><i class="ri-zoom-out-line" style="font-size: 24px;"></i></button>                              <button class="btn btn-sm" id="save-img" title="Descargar img"><i class="fa-solid fa-file-image" style=" font-size: 20px;"></i></button>
+                              <button class="btn btn-sm" id="zoomOutButton" title="ZOOM (-)"><i class="ri-zoom-out-line" style="font-size: 24px;"></i></button> <button class="btn btn-sm" id="save-img" title="Descargar img"><i class="fa-solid fa-file-image" style=" font-size: 20px;"></i></button>
                               <button class="btn btn-sm" id="savePdf" title="Desgargar PDF"><i class="fa-solid fa-file-pdf" style="font-size: 20px;"></i></button>
                               <button class="btn btn-sm" id="guardardata" title="Guardar base de datos"> <i class="fas fa-download" style="font-size: 20px;"></i></button>
 
@@ -148,6 +148,11 @@ if (true) {
                                   <button id="toggle34" class="btn btn-outline-sm btn-sm">TUBO 3/4
                                   </button>
                                 </div>
+                                <!-- tubo de agua de 1 -->
+                                 <div class="col-2">
+                                  <button id="toggle112" class="btn btn-outline-sm btn-sm">TUBO 1
+                                  </button>
+                                </div>
                                 <!--tubo 1/1/2-->
                                 <div class="col-2">
                                   <button id="toggle112" class="btn btn-outline-sm btn-sm">TUBO 1_1/2
@@ -156,6 +161,16 @@ if (true) {
                                 <!--tubo1_1/4-->
                                 <div class="col-2">
                                   <button id="toggle114" class="btn btn-outline-sm btn-sm">TUBO 11_/4
+                                  </button>
+                                </div>
+                                <!-- tubo de agua de 2 -->
+                                <div class="col-2">
+                                  <button id="toggle112" class="btn btn-outline-sm btn-sm">TUBO 2
+                                  </button>
+                                </div>
+                                <!-- tubo de agua de 3  -->
+                                 <div class="col-2">
+                                  <button id="toggle112" class="btn btn-outline-sm btn-sm">TUBO 3
                                   </button>
                                 </div>
                                 <!--tubo caliente-->
@@ -325,7 +340,6 @@ if (true) {
                       </div>
                     </div>
                   </div>
-
                   <!---TUBOS DE SAGUE-->
                   <div class="tab-pane" id="desague" style="height: 50px">
                     <div class="row">
@@ -342,7 +356,7 @@ if (true) {
                               <div class="row">
                                 <!--TUBERlA DE DESAGUE Ø2" SAL. MEDIA PRESIÓN-->
                                 <div class="col-2">
-                                  <button  class="btn btn-outline-sm btn-sm" type="button" title="TUBERlA DE DESAGUE Ø4 SAL. MEDIA PRESIÓN" id="tubo02">TUBO Ø4 SAL. M-P
+                                  <button class="btn btn-outline-sm btn-sm" type="button" title="TUBERlA DE DESAGUE Ø4 SAL. MEDIA PRESIÓN" id="tubo02">TUBO Ø4 SAL. M-P
                                   </button>
                                 </div>
                                 <!--TUBERlA DE DESAGUE Ø4" SAL. MEDIA PRESIÓN-->
@@ -356,7 +370,13 @@ if (true) {
                         </div>
                       </div>
                       <!-- TUBOS DE DESAGUE ACCESORIO -->
-                      <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-12" style="
+                          height: 50px;
+                          overflow-x: auto;
+                          overflow-x: hidden;
+                        ">
+
+
                         <div class="card d-flex justify-content-around">
                           <div class="col-12">
                             <div class="body">
@@ -429,7 +449,12 @@ if (true) {
                                 </div>
                                 <!--CODO DE 90°-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="CODO 90°" id="CodoDesague_90">
+                                  <button class="icono-boton" type="button" title="CODO 04°" id="CodoDesague_90">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO90.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="CODO 02°" id="CodoDesague02">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
@@ -459,13 +484,11 @@ if (true) {
                       </div>
                     </div>
                   </div>
-
                   <div class="tab-pane" id="desague" style="height: 50px"></div>
                 </div>
               </div>
             </div>
           </section>
-
           <section class="drawing-board col-md-12">
             <div class="card" style="align-items: center" id="contenedor_message">
               <h2>Sube tu plano en formato .pdf</h2>
@@ -517,13 +540,13 @@ if (true) {
 
                   <tr>
                     <th scope="row">3</th>
-                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1 1/4</td>
-                    <td><span id=" Tubo112 ">0</span></td>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1 1/2</td>
+                    <td><span id="Tubo112">0</span></td>
 
                   </tr>
                   <tr>
                     <th scope="row">4</th>
-                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1 1/2</td>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1 1/4</td>
                     <td><span id="Tubo114">0</span></td>
 
                   </tr>
@@ -658,7 +681,7 @@ if (true) {
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TEEPLANTA.png" alt="img" class="icono"> TE PLANTA</button></td>
                     <td><span id="Teeplanta">0</span></td>
 
-      
+
                   </tr>
                 </tbody>
               </table>
@@ -701,82 +724,88 @@ if (true) {
                     <td><span id="Tubo04">0</span></td>
                   </tr>
                   <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">2</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/TUBO02.png" alt="img" class="icono"> Tubo </button></td>
                     <td><span id="Tubo02">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">1</th>
+                    <th scope="row">3</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CAJAREGUISTRO.png" alt="img" class="icono"> CAJA DE REGISTRO DE 12" x 24"PARA EL DESAGUE PLUVIAL </button></td>
                     <td><span id="CajaReguistro">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">2</th>
+                    <th scope="row">4</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/SUMIDEROREJILLA.png" alt="img" class="icono"> SUMIDERO DEL TIPO REJILLA (CROMADO) </button></td>
                     <td><span id="Sumidero">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">3</th>
+                    <th scope="row">5</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CRUCESTUBO.png" alt="img" class="icono"> CRUCE DE TUBERIAS SIN CONEXION </button></td>
                     <td><span id="CodoCrusesDes">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">4</th>
+                    <th scope="row">6</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/REGUISTROROSCADO.png" alt="img" class="icono"> REGISTRO ROSCADO DE BRONCE CROMADO </button></td>
                     <td><span id="ReguistroBronce">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">6</th>
+                    <th scope="row">7</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOYEE.png" alt="img" class="icono"> YEE. </button></td>
                     <td><span id="DesagueYEE">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">7</th>
+                    <th scope="row">8</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO45.png" alt="img" class="icono"> CODO 45 A GRADOS </button></td>
                     <td><span id="Codo45">0</span></td>
 
                   </tr>
 
                   <tr>
-                    <th scope="row">7</th>
+                    <th scope="row">9</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOABAJO.png" alt="img" class="icono"> CODO HACIA ABAJO </button></td>
                     <td><span id="CodoHciaAbajo">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">7</th>
+                    <th scope="row">10</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/MONTANTES.png" alt="img" class="icono"> MONTANTES </button></td>
                     <td><span id="MontantesDes">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">7</th>
+                    <th scope="row">11</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOHACIAABAJO.png" alt="img" class="icono"> CODO HACIA ABAJO </button></td>
                     <td><span id="CodoAbajo">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">7</th>
+                    <th scope="row">12</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/TEESANITARIO.png" alt="img" class="icono"> TEE SANITARIO </button></td>
                     <td><span id="TeeSanitario">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">7</th>
+                    <th scope="row">13</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODOTEE.png" alt="img" class="icono"> TEE </button></td>
                     <td><span id="DesagueTEE">0</span></td>
 
                   </tr>
                   <tr>
-                    <th scope="row">7</th>
-                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO90.png" alt="img" class="icono"> CODO </button></td>
+                    <th scope="row">14</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO90.png" alt="img" class="icono"> CODO 04</button></td>
                     <td><span id="Desague90">0</span></td>
+
+                  </tr>
+                  <tr>
+                    <th scope="row">15</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS DESAGUE/CODO90.png" alt="img" class="icono"> CODO 02 </button></td>
+                    <td><span id="Codo02">0</span></td>
 
                   </tr>
                 </tbody>

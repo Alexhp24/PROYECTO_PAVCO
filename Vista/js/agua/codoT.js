@@ -1,4 +1,4 @@
-import { SingleShapeBase } from "../single_shape_base.js";
+/*import { SingleShapeBase } from "../single_shape_base.js";
 
 const verticalLength = 10;
 const horizontalLength = 10;
@@ -70,9 +70,9 @@ export class CodoT extends SingleShapeBase {
     this.fixedPosition = { x, y };
   }
 }
+*/
 
-
-/*import { SingleShapeBase } from "../single_shape_base.js";
+import { SingleShapeBase } from "../single_shape_base.js";
 
 const verticalLength = 10;
 const horizontalLength = 10;
@@ -136,4 +136,3 @@ export class CodoT extends SingleShapeBase {
     this.fixedPosition = { x, y };
   }
 }
-*/

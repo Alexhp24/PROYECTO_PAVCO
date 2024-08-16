@@ -40,7 +40,7 @@ export class DesagueTEE extends SingleShapeBase {
     this.ctx.save();
 
     // Mover el contexto al punto de dibujo y rotar
-    this.ctx.translate(x, y);
+    this.ctx.translate(x, y + 6);
     this.ctx.rotate((this.rotation * Math.PI) / 180);
 
     const verticalStartX = 0;
