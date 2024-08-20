@@ -12,7 +12,7 @@ import { CodoCrusesDes } from "./desague/CodoCrusesDes.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
 import { Codo45 } from "./desague/Codo45.js";
 import { Sumidero } from "./desague/Sumidero.js";
-import { Codo02 } from  "./desague/Codo02.js";
+import { Codo02 } from "./desague/Codo02.js";
 /*
 import { Tubo3_4 } from "./desague/Tubo3_4.js";
 import { TeeSanitario } from "./desague/TeeSanitario.js";
@@ -28,7 +28,6 @@ import { TuboFria } from "./agua/tubo_fria.js";
 import { Tubo } from "./tubo.js";
 
 import { CodoY } from "./agua/codoY.js";
-import { CodoT } from "./agua/codoT.js";
 import { CodoArriba } from "./agua/CodoArriba.js";
 import { CodoAbajoA } from "./agua/CodoAbajoA.js";
 import { Reduccion } from "./agua/Reduccion.js";
@@ -55,6 +54,19 @@ import { Tubo114 } from "./agua/tubo11_4.js";
 import { Codo34 } from "./agua/codo34.js";
 import { Codo114 } from "./agua/codo114.js";
 import { Codo112 } from "./agua/codo112.js";
+import { Codo01 } from "./agua/codo01.js";
+import { Codo002 } from "./agua/codo02.js";
+import { Codo03 } from "./agua/codo03.js";
+import { Codo04 } from "./agua/codo04.js";
+//TEE
+import { CodoT } from "./agua/codoT.js";
+import { CodoT12 } from "./agua/codoT12.js";
+import { CodoT01 } from "./agua/codoT01.js";
+import { CodoT112 }from "./agua/codoT112.js";
+import { CodoT114 } from "./agua/codoT114.js";
+import { CodoT002 } from "./agua/codoT002.js";
+import { CodoT03 } from "./agua/codoT03.js";
+import { CodoT04} from "./agua/codoT04.js";
 
 ////
 const fileInput = document.getElementById("fileInput");
@@ -62,7 +74,6 @@ const canvas = document.getElementById("pdfCanvas");
 
 const saveImg = document.querySelector("#save-img");
 const savePdf = document.querySelector("#savePdf");
-
 
 const ctx = canvas.getContext("2d");
 const pdfCanvas = document.createElement("canvas");
@@ -164,6 +175,44 @@ document.getElementById("toggleX").addEventListener("click", function (event) {
   tmpShape = new CodoT(canvas, "#4C4948");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
+
+document.getElementById("toggleTee12").addEventListener("click", function (event) {
+  tmpShape = new CodoT12(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleTee01").addEventListener("click", function (event) {
+  tmpShape = new CodoT01(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleTee112").addEventListener("click", function (event) {
+  tmpShape = new CodoT112(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleTee114").addEventListener("click", function (event) {
+  tmpShape = new CodoT114(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleTee02").addEventListener("click", function (event) {
+  tmpShape = new CodoT002(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleTee03").addEventListener("click", function (event) {
+  tmpShape = new CodoT03(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+document.getElementById("toggleTee04").addEventListener("click", function (event) {
+  tmpShape = new CodoT04(canvas, "#4C4948");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+
+
+
 /// codos nuevos por diametro de 90
 document.getElementById("toggle90").addEventListener("click", function (event) {
   tmpShape = new Codo90(canvas, "#4C4948");
@@ -174,6 +223,13 @@ document
   .getElementById("togglecodo34")
   .addEventListener("click", function (event) {
     tmpShape = new Codo34(canvas, "#4C4948");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+  });
+
+document
+  .getElementById("togglecodo01")
+  .addEventListener("click", function (event) {
+    tmpShape = new Codo01(canvas, "#4C4948");
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
@@ -190,12 +246,29 @@ document
     tmpShape = new Codo112(canvas, "#4C4948");
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
-
+document
+  .getElementById("togglecodo02")
+  .addEventListener("click", function (event) {
+    tmpShape = new Codo002(canvas, "#4C4948");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+  });
+document
+  .getElementById("togglecodo03")
+  .addEventListener("click", function (event) {
+    tmpShape = new Codo03(canvas, "#4C4948");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+  });
+document
+  .getElementById("togglecodo04")
+  .addEventListener("click", function (event) {
+    tmpShape = new Codo04(canvas, "#4C4948");
+    selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+  });
+//ca
 document.getElementById("toggleCA").addEventListener("click", function (event) {
   tmpShape = new CodoArriba(canvas, "#09BBD7");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
-
 document
   .getElementById("toggleGrifolimpieza")
   .addEventListener("click", function (event) {
@@ -289,7 +362,7 @@ document
 document
   .getElementById("CodoDesague_YEE")
   .addEventListener("click", function (event) {
-    tmpShape = new DesagueYEE(canvas, "blue"); 
+    tmpShape = new DesagueYEE(canvas, "blue");
     selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
   });
 
@@ -447,13 +520,15 @@ canvas.addEventListener("mouseup", function (event) {
     const hitNode = nodes.find(function (node) {
       return node.hitNode(selectedNode);
     });
-    
+
     if (hitNode) {
       selectedNode = tmpShape.getNextNode(hitNode);
     } else {
-      const hitLine = shapes.filter((shape) => shape instanceof Tubo).find(function (shape) {
-        return shape.hitNode(selectedNode);
-      });
+      const hitLine = shapes
+        .filter((shape) => shape instanceof Tubo)
+        .find(function (shape) {
+          return shape.hitNode(selectedNode);
+        });
       nodes.push(selectedNode);
       selectedNode = tmpShape.getNextNode(selectedNode);
       /* if (hitLine) {
@@ -524,37 +599,37 @@ saveImg.addEventListener("click", () => {
 
 function tableToPdfData(tableId) {
   const table = document.getElementById(tableId);
-  const rows = table.querySelectorAll('tr');
+  const rows = table.querySelectorAll("tr");
   const pdfData = {
-      content: [
-          {
-              table: {
-                  body: []
-              }
-          }
-      ]
+    content: [
+      {
+        table: {
+          body: [],
+        },
+      },
+    ],
   };
 
-  rows.forEach(row => {
-      const cells = row.querySelectorAll('td, th');
-      const rowData = [];
-      cells.forEach(cell => rowData.push(cell.innerText));
-      pdfData.content[0].table.body.push(rowData);
+  rows.forEach((row) => {
+    const cells = row.querySelectorAll("td, th");
+    const rowData = [];
+    cells.forEach((cell) => rowData.push(cell.innerText));
+    pdfData.content[0].table.body.push(rowData);
   });
 
   return pdfData;
 }
 
-document.getElementById('proxtt').addEventListener('click', () => {
-  const pdfData = tableToPdfData('tabla1');
-  pdfMake.createPdf(pdfData).download('xd1.pdf');
+document.getElementById("proxtt").addEventListener("click", () => {
+  const pdfData = tableToPdfData("tabla1");
+  pdfMake.createPdf(pdfData).download("xd1.pdf");
 });
 
-document.getElementById('proyect').addEventListener('click', () => {
-  const pdfData = tableToPdfData('tabla2');
-  pdfMake.createPdf(pdfData).download('xd2.pdf');
+document.getElementById("proyect").addEventListener("click", () => {
+  const pdfData = tableToPdfData("tabla2");
+  pdfMake.createPdf(pdfData).download("xd2.pdf");
 });
-  
+
 /*
 function generatePDF(tableId, pdfName) {
   const { jsPDF } = window.jspdf;

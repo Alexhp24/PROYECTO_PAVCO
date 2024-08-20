@@ -77,10 +77,10 @@ import { SingleShapeBase } from "../single_shape_base.js";
 const verticalLength = 10;
 const horizontalLength = 10;
 
-export class CodoT extends SingleShapeBase {
+export class CodoT12 extends SingleShapeBase {
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `Tee 3/4`;
+    this.label = `Tee 1/2P`;
   }
 
   drawT(x, y) {

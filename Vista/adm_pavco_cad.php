@@ -149,7 +149,7 @@ if (true) {
                                   </button>
                                 </div>
                                 <!-- tubo de agua de 1 -->
-                                 <div class="col-2">
+                                <div class="col-2">
                                   <button id="toggle112" class="btn btn-outline-sm btn-sm">TUBO 1
                                   </button>
                                 </div>
@@ -169,8 +169,13 @@ if (true) {
                                   </button>
                                 </div>
                                 <!-- tubo de agua de 3  -->
-                                 <div class="col-2">
+                                <div class="col-2">
                                   <button id="toggle112" class="btn btn-outline-sm btn-sm">TUBO 3
+                                  </button>
+                                </div>
+                                <!-- tubo de 4 -->
+                                <div class="col-2">
+                                  <button id="toggle112" class="btn btn-outline-sm btn-sm">TUBO 4
                                   </button>
                                 </div>
                                 <!--tubo caliente-->
@@ -183,7 +188,6 @@ if (true) {
                           </div>
                         </div>
                       </div>
-
                       <!-- TUBOS DE AGUA ACCESORIO -->
                       <div class="col-lg-3 col-md-3 col-sm-6 col-12" style="
                           height: 50px;
@@ -206,27 +210,136 @@ if (true) {
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
-                                <!---CODO 11/4-->
+                                <!--CODO DE 1-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="CODO 1_1/2°" id="togglecodo112">
+                                  <button class="icono-boton" type="button" title="CODO 1" id="togglecodo01">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
-                                <!--CODO DE 11/2-->
+                                <!---CODO 11/4-->
                                 <div class="col-2 position">
                                   <button class="icono-boton" type="button" title="CODO 1_1/4°" id="togglecodo114">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
-                                <!---CODOO TE--->
+                                <!--CODO DE 11/2-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="CODO TEE°" id="toggleX">
+                                  <button class="icono-boton" type="button" title="CODO 1_1/2°" id="togglecodo112">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--CODO DE 2--->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="CODO 2" id="togglecodo02">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--CODO DE 3-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="CODO 3°" id="togglecodo03">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--CODO DE 4-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="CODO 4°" id="togglecodo04">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+<!-- codo TEE -->
+                                <!---CODOO TE 1/2--->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="CODO Tee 1/2" id="toggleTee12">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
-                                <!--codo yee-->
+                                <!---CODOO TE 3/4--->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="CODO YEE°" id="toggleY">
+                                  <button class="icono-boton" type="button" title="Tee 3/4°" id="toggleX">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!---CODOO TE 1--->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Tee 1" id="toggleTee01">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!---CODOO TE 1 1/4--->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Tee 1 1/4" id="toggleTee114">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!---CODOO TE 1 1/2--->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Tee 1 1/2" id="toggleTee112">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!---CODOO TE 2--->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Tee 2" id="toggleTee02">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!---CODOO TE 3--->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Tee 3" id="toggleTee03">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!---CODOO TE 4--->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Tee 4" id="toggleTee04">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--yee 3/4-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="CODO 3/4" id="toggleY">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--Yee 1/2-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Yee 1/2" id="toggleY">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--Yee 1-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Yee 1" id="toggleY">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--Yee 1 1/4-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Yee 1 1/4" id="toggleY">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--Yee 1 1/2-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Yee 1 1/2" id="toggleY">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--Yee 2-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Yee 2" id="toggleY">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--Yee 3-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Yee 3" id="toggleY">
+                                    <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
+                                  </button>
+                                </div>
+                                <!--Yee 4-->
+                                <div class="col-2 position">
+                                  <button class="icono-boton" type="button" title="Yee 4" id="toggleY">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
@@ -528,161 +641,209 @@ if (true) {
                     <th scope="row">1</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1/2</td>
                     <td><span id="TuboFria">0</span></td>
-
                   </tr>
 
                   <tr>
                     <th scope="row">2</th>
                     <td> <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 3/4</td>
                     <td><span id="Tubo34">0</span></td>
-
                   </tr>
 
                   <tr>
                     <th scope="row">3</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1 1/2</td>
                     <td><span id="Tubo112">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">4</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBO2.png" alt="img" class="icono"> TUBO 1 1/4</td>
                     <td><span id="Tubo114">0</span></td>
-
                   </tr>
 
                   <tr>
                     <th scope="row">5</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TUBOCALIENTE1.png" alt="img" class="icono"> Agua C</td>
                     <td><span id="TuboCaliente">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">6</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="img" class="icono"> Codo 1/2</button></td>
                     <td><span id="Codo90">0</span></td>
-
-
                   </tr>
+
                   <tr>
                     <th scope="row">7</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="img" class="icono"> Codo 3/4</button></td>
                     <td><span id="Codo34">0</span></td>
-
                   </tr>
+
+                  <tr>
+                    <th scope="row">7</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="img" class="icono"> Codo 01</button></td>
+                    <td><span id="Codo01">0</span></td>
+                  </tr>
+
                   <tr>
                     <th scope="row">8</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="img" class="icono"> Codo 11/4</button></td>
                     <td><span id="Codo114">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">9</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="img" class="icono"> Codo 11/2</button></td>
                     <td><span id="Codo112">0</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="img" class="icono"> Codo 02</button></td>
+                    <td><span id="Codo002">0</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="img" class="icono"> Codo 03</button></td>
+                    <td><span id="Codo03">0</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="img" class="icono"> Codo 03</button></td>
+                    <td><span id="Codo04">0</span></td>
+                  </tr>
 
+                  <tr>
+                    <th scope="row">10</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="img" class="icono"> Codo Tee 3/4</td>
+                    <td><span id="CodoT">0</span> </td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">10</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="img" class="icono"> Codo Tee 1/2</td>
+                    <td><span id="CodoT12">0</span> </td>
                   </tr>
                   <tr>
                     <th scope="row">10</th>
-                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="img" class="icono"> Codo Tee</td>
-                    <td><span id="CodoT">0</span> </td>
-
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="img" class="icono"> Codo Tee 1</td>
+                    <td><span id="CodoT01">0</span> </td>
                   </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="img" class="icono"> Codo Tee 1 1/2</td>
+                    <td><span id="CodoT112">0</span> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="img" class="icono"> Codo Tee 1 1/4</td>
+                    <td><span id="CodoT114">0</span> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="img" class="icono"> Codo Tee 2</td>
+                    <td><span id="CodoT002">0</span> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="img" class="icono"> Codo Tee 3</td>
+                    <td><span id="CodoT03">0</span> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">10</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="img" class="icono"> Codo Tee 4</td>
+                    <td><span id="CodoT04">0</span> </td>
+                  </tr>
+
                   <tr>
                     <th scope="row">11</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="img" class="icono"> Codo Yee </td>
                     <td><span id="CodoY">0</span></td>
-
                   </tr>
 
                   <tr>
                     <th scope="row">12</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/MONTANTES.png" alt="img" class="icono"> MONTANTES</button></td>
                     <td><span id="Montantes">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">13</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/GRIFOLIMPIEZA.png" alt="img" class="icono"> GRIFO LIMPIEZA</button></td>
                     <td><span id="Grifolimpieza">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">14</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/GRIFORIEGO.png" alt="img" class="icono"> GRIFO RIEGO</button></td>
                     <td><span id="Griforiego">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">15</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CRUCESTUBO.png" alt="img" class="icono"> TUBO CRUCES</button></td>
                     <td><span id="CrucesinConexion">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">16</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CAJAPORTAMEDIDORAGUA.png" alt="img" class="icono"> CAJA DE MEDIDOR DE AGUA</button></td>
                     <td><span id="Cajareguistroagua">0</span></td>
-
-
                   </tr>
+
                   <tr>
                     <th scope="row">17</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/VALVULACONTROL.png" alt="img" class="icono"> VALVULA CONTROL</button></td>
                     <td><span id="LlaveGeneral">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">18</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOHACIAARRIBA.png" alt="img" class="icono"> CODO HACIA ARRIBA </button></td>
                     <td><span id="CodoArriba">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">19</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOHACIABAJO.png" alt="img" class="icono"> CODO HACIA ABAJO </button></td>
                     <td><span id="CodoAbajoA">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">20</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/VAVULACHECK1.png" alt="img" class="icono"> VAVULA CHECK</button></td>
                     <td><span id="ValvulaCheck">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">21</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TEEHACIAABAJO.png" alt="img" class="icono"> TE ABAJO</button></td>
                     <td><span id="TeeAbajo">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">22</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TEEHACIARRIBA.png" alt="img" class="icono"> TE ARRIBA</button></td>
                     <td><span id="TeeArriba">0</span></td>
-
-
                   </tr>
+
                   <tr>
                     <th scope="row">23</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/UNIONUNIVERSAL.png" alt="img" class="icono">UNION UNIVERSA</button></td>
                     <td><span id="UnionUniversal">0</span></td>
-
-
                   </tr>
+
                   <tr>
                     <th scope="row">24</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/REDUCCION.png" alt="img" class="icono"> REDUCCION </button></td>
                     <td><span id="Reduccion">0</span></td>
-
                   </tr>
+
                   <tr>
                     <th scope="row">25</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/TEEPLANTA.png" alt="img" class="icono"> TE PLANTA</button></td>
                     <td><span id="Teeplanta">0</span></td>
-
-
                   </tr>
+
                 </tbody>
               </table>
             </div>
@@ -828,13 +989,10 @@ if (true) {
     <!-- PDF.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
     <!-- Tu archivo JavaScript personalizado -->
-
     <!---pdf--
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>--->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/vfs_fonts.js"></script>
-
-
   </body>
 
   </html>
