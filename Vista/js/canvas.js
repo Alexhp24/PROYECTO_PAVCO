@@ -27,7 +27,8 @@ import { TuboFria } from "./agua/tubo_fria.js";
 
 import { Tubo } from "./tubo.js";
 
-import { CodoY } from "./agua/codoY.js";
+
+
 import { CodoArriba } from "./agua/CodoArriba.js";
 import { CodoAbajoA } from "./agua/CodoAbajoA.js";
 import { Reduccion } from "./agua/Reduccion.js";
@@ -67,7 +68,15 @@ import { CodoT114 } from "./agua/codoT114.js";
 import { CodoT002 } from "./agua/codoT002.js";
 import { CodoT03 } from "./agua/codoT03.js";
 import { CodoT04} from "./agua/codoT04.js";
-
+//YEE
+import { CodoY } from "./agua/codoY.js";
+import { CodoY12 } from "./agua/codoY12.js";
+import { CodoY01 } from "./agua/codoY01.js";
+import { CodoY112 } from "./agua/codoY112.js";
+import { CodoY114 } from "./agua/codoY114.js";
+import { CodoY02 } from "./agua/codoY02.js";
+import { CodoY03 } from "./agua/codoY03.js";
+import { CodoY04 } from "./agua/codoY04.js";
 ////
 const fileInput = document.getElementById("fileInput");
 const canvas = document.getElementById("pdfCanvas");
@@ -166,11 +175,54 @@ document.getElementById("tubo04").addEventListener("click", function (event) {
 });
 
 // ACCESORIO DE  AGUA
+
+//accesorios de agua YEE
 document.getElementById("toggleY").addEventListener("click", function (event) {
   tmpShape = new CodoY(canvas, "orange");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
 
+document.getElementById("toggleY01").addEventListener("click", function (event) {
+  tmpShape = new CodoY01(canvas, "orange");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleY12").addEventListener("click", function (event) {
+  tmpShape = new CodoY12(canvas, "orange");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleY01").addEventListener("click", function (event) {
+  tmpShape = new CodoY01(canvas, "orange");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleY112").addEventListener("click", function (event) {
+  tmpShape = new CodoY112(canvas, "orange");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleY114").addEventListener("click", function (event) {
+  tmpShape = new CodoY114(canvas, "orange");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleY02").addEventListener("click", function (event) {
+  tmpShape = new CodoY02(canvas, "orange");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+document.getElementById("toggleY03").addEventListener("click", function (event) {
+  tmpShape = new CodoY03(canvas, "orange");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+document.getElementById("toggleY04").addEventListener("click", function (event) {
+  tmpShape = new CodoY04(canvas, "orange");
+  selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
+});
+
+
+//accesorio de agua TEE
 document.getElementById("toggleX").addEventListener("click", function (event) {
   tmpShape = new CodoT(canvas, "#4C4948");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
@@ -209,11 +261,7 @@ document.getElementById("toggleTee04").addEventListener("click", function (event
   tmpShape = new CodoT04(canvas, "#4C4948");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));
 });
-
-
-
-
-/// codos nuevos por diametro de 90
+/// accesorios de agua 90°
 document.getElementById("toggle90").addEventListener("click", function (event) {
   tmpShape = new Codo90(canvas, "#4C4948");
   selectedNode = tmpShape.getNextNode(getMousePos(canvas, event));

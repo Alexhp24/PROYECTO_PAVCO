@@ -110,7 +110,6 @@ if (true) {
                               <button class="btn btn-sm" id="zoomOutButton" title="ZOOM (-)"><i class="ri-zoom-out-line" style="font-size: 24px;"></i></button> <button class="btn btn-sm" id="save-img" title="Descargar img"><i class="fa-solid fa-file-image" style=" font-size: 20px;"></i></button>
                               <button class="btn btn-sm" id="savePdf" title="Desgargar PDF"><i class="fa-solid fa-file-pdf" style="font-size: 20px;"></i></button>
                               <button class="btn btn-sm" id="guardardata" title="Guardar base de datos"> <i class="fas fa-download" style="font-size: 20px;"></i></button>
-
                               <label class="btn btn-sm" for="fileInput" title="Nuevo"> <i class="fa-solid fa-file" style="font-size: 26px;"></i></label>
                               <input type="file" id="fileInput" accept="application/pdf" style="display:none;">
                             </div>
@@ -124,7 +123,6 @@ if (true) {
                       <div class="col-lg-3 col-md-3 col-sm-6 col-12 py-2"></div>
                     </div>
                   </div>
-
                   <div class="tab-pane" id="agua" style="height: 50px">
                     <div class="row">
                       <!-- seccion herramientas -->
@@ -198,6 +196,9 @@ if (true) {
                           <div class="col-12">
                             <div class="body">
                               <div class="row">
+
+                                <!-- codo de 90 tipos de pulgada -->
+
                                 <!--CODO DE 90 SEGUN PULGADAS-->
                                 <div class="col-2 dropup">
                                   <button class="icono-boton" type="button" title="CODO 1/2°" id="toggle90">
@@ -246,7 +247,9 @@ if (true) {
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODO90.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
-<!-- codo TEE -->
+
+                                <!-- codo TEE tipos de pulgada  -->
+
                                 <!---CODOO TE 1/2--->
                                 <div class="col-2 position">
                                   <button class="icono-boton" type="button" title="CODO Tee 1/2" id="toggleTee12">
@@ -295,6 +298,9 @@ if (true) {
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOTEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
+
+                                <!-- codo Yee segun sus pulgadas -->
+
                                 <!--yee 3/4-->
                                 <div class="col-2 position">
                                   <button class="icono-boton" type="button" title="CODO 3/4" id="toggleY">
@@ -303,43 +309,43 @@ if (true) {
                                 </div>
                                 <!--Yee 1/2-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="Yee 1/2" id="toggleY">
+                                  <button class="icono-boton" type="button" title="Yee 1/2" id="toggleY12">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--Yee 1-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="Yee 1" id="toggleY">
+                                  <button class="icono-boton" type="button" title="Yee 1" id="toggleY01">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--Yee 1 1/4-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="Yee 1 1/4" id="toggleY">
+                                  <button class="icono-boton" type="button" title="Yee 1 1/4" id="toggleY114">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--Yee 1 1/2-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="Yee 1 1/2" id="toggleY">
+                                  <button class="icono-boton" type="button" title="Yee 1 1/2" id="toggleY112">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--Yee 2-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="Yee 2" id="toggleY">
+                                  <button class="icono-boton" type="button" title="Yee 2" id="toggleY02">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--Yee 3-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="Yee 3" id="toggleY">
+                                  <button class="icono-boton" type="button" title="Yee 3" id="toggleY03">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
                                 <!--Yee 4-->
                                 <div class="col-2 position">
-                                  <button class="icono-boton" type="button" title="Yee 4" id="toggleY">
+                                  <button class="icono-boton" type="button" title="Yee 4" id="toggleY04">
                                     <img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="Icono" class="icono" />
                                   </button>
                                 </div>
@@ -758,6 +764,48 @@ if (true) {
                     <th scope="row">11</th>
                     <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="img" class="icono"> Codo Yee </td>
                     <td><span id="CodoY">0</span></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">11</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="img" class="icono"> Codo Yee 1/2 </td>
+                    <td><span id="CodoY12">0</span></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">11</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="img" class="icono"> Codo Yee 01</td>
+                    <td><span id="CodoY01">0</span></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">11</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="img" class="icono"> Codo Yee 1 1/2</td>
+                    <td><span id="CodoY112">0</span></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">11</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="img" class="icono"> Codo Yee 1 1/4</td>
+                    <td><span id="CodoY114">0</span></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">11</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="img" class="icono"> Codo Yee 02</td>
+                    <td><span id="CodoY02">0</span></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">11</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="img" class="icono"> Codo Yee 03</td>
+                    <td><span id="CodoY03">0</span></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">11</th>
+                    <td><img src="./IMG PAVCO/IMG PAVCO/TUBOS AGUA/CODOYEE.png" alt="img" class="icono"> Codo Yee 04</td>
+                    <td><span id="CodoY04">0</span></td>
                   </tr>
 
                   <tr>
