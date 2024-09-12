@@ -7,7 +7,7 @@ const horizontalLength = 10; // Longitud ajustada para la línea horizontal
 export class Desague90 extends SingleShapeBase {
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `Codo 04`; // Asignar un número de etiqueta único a este codo
+    this.label = `Codo 02`; // Asignar un número de etiqueta único a este codo
   }
 
   // Función para manejar el doble clic

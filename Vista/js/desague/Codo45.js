@@ -1,15 +1,14 @@
-
 import { SingleShapeBase } from "../single_shape_base.js";
 
 // Longitud de cada línea
-const lineLength = 15; // Longitud de la línea horizontal en mm
+const lineLength = 13; // Longitud de la línea horizontal en mm
 const verticalLength = 10; // Longitud de la línea vertical en mm
 const diagonalOffset = lineLength * Math.sqrt(2) / 2; // Offset para el ángulo de 45 grados
 
 export class Codo45 extends SingleShapeBase {
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `Codo de 45°`; // Asignar un número de etiqueta único a este codo
+    this.label = `Codo 02`; // Asignar un número de etiqueta único a este codo
     this.rotation = 0; // Inicializar rotación a 0 grados
     this.lastPoint = { x: 0, y: 0 }; // Inicializar último punto
   }
@@ -89,8 +88,8 @@ export class Codo45 extends SingleShapeBase {
     this.ctx.lineTo(end.x + halfLength, end.y);
 
     // Calcular la posición de la línea vertical
-    // Alinear verticalmente con el extremo derecho de la primera línea horizontal
-    const verticalStart = { x: middle.x + lineLength, y: middle.y }; // Comienza en el extremo derecho de la primera línea horizontal
+    // Alinear verticalmente con el extremo izquierdo de la primera línea horizontal
+    const verticalStart = { x: start.x - halfLength, y: start.y + halfLength / 2 }; // Comienza centrado en el extremo izquierdo de la línea horizontal
     const verticalEnd = { x: verticalStart.x, y: verticalStart.y - verticalLength }; // Extiende hacia abajo
 
     // Dibujar la línea vertical
@@ -120,124 +119,125 @@ export class Codo45 extends SingleShapeBase {
   }
 }
 
-/*import { SingleShapeBase } from "../single_shape_base.js";
 
-// Longitud de cada línea
-const lineLength = 15; // Longitud de la línea horizontal en mm
-const verticalLength = 10; // Longitud de la línea vertical en mm
-const diagonalOffset = lineLength * Math.sqrt(2) / 2; // Offset para el ángulo de 45 grados
+// import { SingleShapeBase } from "../single_shape_base.js";
 
-export class Codo45 extends SingleShapeBase {
-  constructor(ctx, color, count) {
-    super(ctx, color);
-    this.label = `Y${count}`; // Asignar un número de etiqueta único a este codo
-    this.rotation = 0; // Inicializar rotación a 0 grados
-  }
+// // Longitud de cada línea
+// const lineLength = 15; // Longitud de la línea horizontal en mm
+// const verticalLength = 10; // Longitud de la línea vertical en mm
+// const diagonalOffset = lineLength * Math.sqrt(2) / 2; // Offset para el ángulo de 45 grados
 
-  // Función para manejar el evento de doble clic
-  onDoubleClick(event) {
-    const rect = this.ctx.canvas.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+// export class Codo45 extends SingleShapeBase {
+//   constructor(ctx, color) {
+//     super(ctx, color);
+//     this.label = `Codo de 45°`; // Asignar un número de etiqueta único a este codo
+//     this.rotation = 0; // Inicializar rotación a 0 grados
+//     this.lastPoint = { x: 0, y: 0 }; // Inicializar último punto
+//   }
 
-    // Obtener las coordenadas relativas al punto de origen del codo
-    const relativeX = x - this.lastPoint.x;
-    const relativeY = y - this.lastPoint.y;
+//   // Función para manejar el evento de doble clic
+//   onDoubleClick(event) {
+//     const rect = this.ctx.canvas.getBoundingClientRect();
+//     const x = event.clientX - rect.left;
+//     const y = event.clientY - rect.top;
 
-    // Calcular las coordenadas rotadas
-    const rotatedX =
-      relativeX * Math.cos((-this.rotation * Math.PI) / 180) -
-      relativeY * Math.sin((-this.rotation * Math.PI) / 180);
-    const rotatedY =
-      relativeX * Math.sin((-this.rotation * Math.PI) / 180) +
-      relativeY * Math.cos((-this.rotation * Math.PI) / 180);
+//     // Obtener las coordenadas relativas al punto de origen del codo
+//     const relativeX = x - this.lastPoint.x;
+//     const relativeY = y - this.lastPoint.y;
 
-    // Verificar si el doble clic ocurrió dentro del área del codo
-    if (
-      rotatedX >= -lineLength / 2 &&
-      rotatedX <= lineLength / 2 &&
-      rotatedY >= -lineLength / 2 &&
-      rotatedY <= lineLength / 2
-    ) {
-      // Calcular las coordenadas ajustadas para dibujar el codo lejos del punto de clic
-      const adjustedX = this.lastPoint.x + rotatedX;
-      const adjustedY = this.lastPoint.y + rotatedY;
+//     // Calcular las coordenadas rotadas
+//     const rotatedX =
+//       relativeX * Math.cos((-this.rotation * Math.PI) / 180) -
+//       relativeY * Math.sin((-this.rotation * Math.PI) / 180);
+//     const rotatedY =
+//       relativeX * Math.sin((-this.rotation * Math.PI) / 180) +
+//       relativeY * Math.cos((-this.rotation * Math.PI) / 180);
 
-      // Actualizar el último punto a las coordenadas ajustadas
-      this.lastPoint.x = adjustedX;
-      this.lastPoint.y = adjustedY;
+//     // Verificar si el doble clic ocurrió dentro del área del codo
+//     if (
+//       rotatedX >= -lineLength / 2 &&
+//       rotatedX <= lineLength / 2 &&
+//       rotatedY >= -lineLength / 2 &&
+//       rotatedY <= lineLength / 2
+//     ) {
+//       // Calcular las coordenadas ajustadas para dibujar el codo lejos del punto de clic
+//       const adjustedX = this.lastPoint.x + rotatedX;
+//       const adjustedY = this.lastPoint.y + rotatedY;
 
-      // Cambiar la rotación en 45 grados
-      this.rotation = (this.rotation + 45) % 360;
-      this.draw();
-    }
-  }
+//       // Actualizar el último punto a las coordenadas ajustadas
+//       this.lastPoint.x = adjustedX;
+//       this.lastPoint.y = adjustedY;
 
-  // Función para dibujar el codo en una posición dada
-  drawCodo45(x, y) {
-    this.ctx.save();
-    
-    this.ctx.translate(x, y);
-    this.ctx.rotate((this.rotation * Math.PI) / 180);
+//       // Cambiar la rotación en 45 grados
+//       this.rotation = (this.rotation + 45) % 360;
+//       this.draw();
+//     }
+//   }
 
-    // Calcular los puntos para las líneas
-    const halfLength = lineLength / 2;
-    const offset = diagonalOffset;
-    
-    // Puntos para las líneas
-    const start = { x: -halfLength, y: 0 }; // Punto inicial de la línea horizontal
-    const middle = { x: 0, y: 0 }; // Punto final de la línea horizontal
-    const end = { x: middle.x + offset, y: middle.y - offset }; // Punto final de la línea diagonal
+//   // Función para dibujar el codo en una posición dada
+//   drawCodo45(x, y) {
+//     this.ctx.save();
 
-    // Comenzar a dibujar la forma
-    this.ctx.beginPath();
+//     this.ctx.translate(x, y);
+//     this.ctx.rotate((this.rotation * Math.PI) / 180);
 
-    // Dibujar la primera línea horizontal
-    this.ctx.moveTo(start.x, start.y);
-    this.ctx.lineTo(middle.x, middle.y);
+//     // Calcular los puntos para las líneas
+//     const halfLength = lineLength / 2;
+//     const offset = diagonalOffset;
 
-    // Añadir línea horizontal en el extremo izquierdo de la primera línea
-    this.ctx.moveTo(start.x - halfLength, start.y);
-    this.ctx.lineTo(start.x + halfLength, start.y);
+//     // Puntos para las líneas
+//     const start = { x: -halfLength, y: 0 }; // Punto inicial de la línea horizontal
+//     const middle = { x: 0, y: 0 }; // Punto final de la línea horizontal
+//     const end = { x: middle.x + offset, y: middle.y - offset }; // Punto final de la línea diagonal
 
-    // Dibujar la segunda línea diagonal
-    this.ctx.moveTo(middle.x, middle.y);
-    this.ctx.lineTo(end.x, end.y);
+//     // Comenzar a dibujar la forma
+//     this.ctx.beginPath();
 
-    // Añadir línea horizontal en el extremo derecho de la segunda línea
-    this.ctx.moveTo(end.x - halfLength, end.y);
-    this.ctx.lineTo(end.x + halfLength, end.y);
+//     // Dibujar la primera línea horizontal
+//     this.ctx.moveTo(start.x, start.y);
+//     this.ctx.lineTo(middle.x, middle.y);
 
-    // Calcular la posición de la línea vertical
-    // Alinear verticalmente con el borde derecho de la línea horizontal
-    const verticalStart = { x: middle.x + halfLength, y: middle.y }; // Comienza en el extremo derecho de la línea horizontal
-    const verticalEnd = { x: verticalStart.x, y: verticalStart.y - verticalLength }; // Extiende hacia abajo
+//     // Añadir línea horizontal en el extremo izquierdo de la primera línea
+//     this.ctx.moveTo(start.x - halfLength, start.y);
+//     this.ctx.lineTo(start.x + halfLength, start.y);
 
-    // Dibujar la línea vertical
-    this.ctx.moveTo(verticalStart.x, verticalStart.y);
-    this.ctx.lineTo(verticalEnd.x, verticalEnd.y);
+//     // Dibujar la segunda línea diagonal
+//     this.ctx.moveTo(middle.x, middle.y);
+//     this.ctx.lineTo(end.x, end.y);
 
-    this.ctx.lineWidth = 1.5;
-    this.ctx.strokeStyle = this.color;
+//     // Añadir línea horizontal en el extremo derecho de la segunda línea
+//     this.ctx.moveTo(end.x - halfLength, end.y);
+//     this.ctx.lineTo(end.x + halfLength, end.y);
 
-    // Trazar el camino
-    this.ctx.stroke();
+//     // Calcular la posición de la línea vertical
+//     // Alinear verticalmente con el extremo izquierdo de la primera línea horizontal
+//     const verticalStart = { x: start.x - halfLength, y: start.y }; // Comienza en el extremo izquierdo de la primera línea horizontal
+//     const verticalEnd = { x: verticalStart.x, y: verticalStart.y - verticalLength }; // Extiende hacia abajo
 
-    // Dibujar la etiqueta
-    this.ctx.font = "10px Arial";
-    this.ctx.fillText(
-      this.label,
-      end.x + 5,
-      end.y - 10
-    );
+//     // Dibujar la línea vertical
+//     this.ctx.moveTo(verticalStart.x, verticalStart.y);
+//     this.ctx.lineTo(verticalEnd.x, verticalEnd.y);
 
-    this.ctx.restore();
-  }
+//     this.ctx.lineWidth = 1.5;
+//     this.ctx.strokeStyle = this.color;
 
-  // Función para dibujar el codo
-  draw() {
-    this.drawCodo45(this.lastPoint.x, this.lastPoint.y);
-  }
-}
+//     // Trazar el camino
+//     this.ctx.stroke();
 
-*/
+//     // Dibujar la etiqueta
+//     this.ctx.font = "10px Arial";
+//     this.ctx.fillText(
+//       this.label,
+//       end.x + 5,
+//       end.y - 10
+//     );
+
+//     this.ctx.restore();
+//   }
+
+//   // Función para dibujar el codo
+//   draw() {
+//     this.drawCodo45(this.lastPoint.x, this.lastPoint.y);
+//   }
+// }
+

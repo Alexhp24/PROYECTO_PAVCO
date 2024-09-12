@@ -15,11 +15,9 @@ export class SingleShapeBase {
   done() {
     return this.lastPoint;
   }
-
   canBeDone() {
     return this.isDone;
   }
-
   getNextNode(coord) {
     let node;
     if (coord instanceof Node) {
@@ -68,7 +66,7 @@ export class SingleShapeBase {
       this.lastPoint.x = adjustedX;
       this.lastPoint.y = adjustedY;
 
-      this.rotation = (this.rotation + 90) % 360;
+      this.rotation = (this.rotation + 45) % 360;
   }
 
   registerYourself() {
@@ -95,7 +93,7 @@ export class SingleShapeBase {
       this.lastPoint.x = adjustedX;
       this.lastPoint.y = adjustedY;
 
-      this.rotation = (this.rotation + 90) % 360;
+      this.rotation = (this.rotation + 45) % 360;
     };
     this.addPoint = (event) => {
       this.isDone = true;

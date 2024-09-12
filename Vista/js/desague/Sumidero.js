@@ -8,16 +8,16 @@ export class Sumidero extends SingleShapeBase {
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `Sumidero Tipo Rejilla`;
+    this.label = `Sumidero Tipo Rejilla Ø2`;
 
     // Configurar dimensiones y colores a partir de opciones o usar valores por defecto
-    this.largerCircleRadius = options.largerCircleRadius || 6; // Radio del círculo más grande en mm
-    this.squareSize = options.squareSize || this.largerCircleRadius * 2 + 10; // Tamaño del cuadro
-    this.lineLength = options.lineLength || 10; // Longitud de las líneas en mm
-    this.uShapeHorizontal = options.uShapeHorizontal || 20; // Longitud horizontal de la "U" en mm
-    this.uShapeVertical = options.uShapeVertical || 40; // Longitud vertical de la "U" en mm
-    this.tShapeWidth = options.tShapeWidth || 20; // Ancho de la parte superior de la "T" en mm
-    this.tShapeHeight = options.tShapeHeight || 15; // Altura de la parte vertical de la "T" en mm
+    this.largerCircleRadius = options.largerCircleRadius || 3; // Radio del círculo más grande en mm
+    this.squareSize = options.squareSize || this.largerCircleRadius * 2 + 3.5; // Tamaño del cuadro
+    this.lineLength = options.lineLength || 5; // Longitud de las líneas en mm
+    this.uShapeHorizontal = options.uShapeHorizontal || 7; // Longitud horizontal de la "U" en mm
+    this.uShapeVertical = options.uShapeVertical || 10; // Longitud vertical de la "U" en mm
+    this.tShapeWidth = options.tShapeWidth || 10; // Ancho de la parte superior de la "T" en mm
+    this.tShapeHeight = options.tShapeHeight || 10; // Altura de la parte vertical de la "T" en mm
   }
 
   // Manejar el evento de doble clic

@@ -5,10 +5,10 @@ const verticalLength = 15; // Longitud de la línea vertical
 const diagonalLength = 10.6; // Longitud de la línea diagonal (ajustada para mantener la proporcionalidad)
 const horizontalLength = 10; // Longitud de la línea horizontal inclinada
 
-export class DesagueYEE extends SingleShapeBase {
+export class DesagueYEE04 extends SingleShapeBase {
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `Codo Yee Ø4 a Ø2`; // Asignar un número de etiqueta único a este codo
+    this.label = `Codo Yee 04`; // Asignar un número de etiqueta único a este codo
   }
 
   // Función para dibujar la forma Y en una posición dada
@@ -37,37 +37,30 @@ export class DesagueYEE extends SingleShapeBase {
 
     // Comenzar a dibujar la forma
     this.ctx.beginPath();
-    this.ctx.strokeStyle = "orange"; // Color para las líneas vertical y horizontales estándar
-    this.ctx.lineWidth = 2.5; // Grosor para las líneas estándar
+
+    // Dibujar la línea vertical principal de arriba hacia abajo
     this.ctx.moveTo(verticalStartX, verticalStartY);
     this.ctx.lineTo(verticalStartX, verticalEndY);
-    this.ctx.stroke();
 
     // Dibujar las líneas horizontales en los extremos de la línea vertical
-    this.ctx.beginPath();
     this.ctx.moveTo(verticalStartX - horizontalLength / 2, verticalStartY);
     this.ctx.lineTo(verticalStartX + horizontalLength / 2, verticalStartY);
-    this.ctx.stroke();
 
-    this.ctx.beginPath();
     this.ctx.moveTo(verticalStartX - horizontalLength / 2, verticalEndY);
     this.ctx.lineTo(verticalStartX + horizontalLength / 2, verticalEndY);
-    this.ctx.stroke();
 
     // Dibujar la línea diagonal desde la mitad de la línea vertical hacia arriba
-    this.ctx.beginPath();
-    this.ctx.strokeStyle = "#800000"; // Cambiar el color de la línea diagonal
-    this.ctx.lineWidth = 2.5; // Grosor de la línea diagonal
     this.ctx.moveTo(verticalStartX, midY);
     this.ctx.lineTo(diagonalEndXFinal, diagonalEndYFinal);
-    this.ctx.stroke();
 
     // Dibujar la línea horizontal inclinada desde el extremo de la línea diagonal
-    this.ctx.beginPath();
-    this.ctx.strokeStyle = "#800000"; // Cambiar el color de la línea horizontal inclinada
-    this.ctx.lineWidth = 2.5; // Grosor de la línea horizontal inclinada
     this.ctx.moveTo(horizontalStartX, horizontalStartY);
     this.ctx.lineTo(horizontalEndX, horizontalEndY);
+
+    this.ctx.lineWidth = 2.5;
+    this.ctx.strokeStyle = "purple";
+
+    // Trazar el camino
     this.ctx.stroke();
 
     // Dibujar la etiqueta

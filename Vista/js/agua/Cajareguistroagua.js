@@ -4,6 +4,7 @@ import { SingleShapeBase } from "../single_shape_base.js";
 const rectWidth = 50; // Ancho del rectángulo en mm
 const rectHeight = 35; // Altura del rectángulo en mm
 const circleRadius = 4; // Radio del círculo en mm
+
 const smallRectWidth = 8; // Ancho de los rectángulos pequeños
 const smallRectHeight = 4; // Altura de los rectángulos pequeños
 

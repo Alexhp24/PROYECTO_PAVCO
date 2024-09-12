@@ -1,3 +1,4 @@
+
 // Importar la clase Codo desde Codo.js
 import { SingleShapeBase } from "../single_shape_base.js";
 
@@ -14,9 +15,8 @@ export class CajaReguistro extends SingleShapeBase {
     super(ctx, color);
 
     // Asignar una etiqueta única a este codo
-    this.label = `Caja de Reguistro`;
+    this.label = `Caja de Reguistro 12 x 24`;
   }
-
   // Manejar el evento de doble clic
   onDoubleClick(event) {
     // Obtener las coordenadas del evento respecto al canvas

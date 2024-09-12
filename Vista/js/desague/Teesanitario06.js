@@ -3,13 +3,13 @@ import { SingleShapeBase } from "../single_shape_base.js";
 const verticalLength = 10;
 const horizontalLength = 10;
 
-export class DesagueTEE extends SingleShapeBase {
+export class TeeSanitario06 extends SingleShapeBase {
   static labelCount = 0;
   static totalCount = 0;
 
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `Codo Tee 02`;
+    this.label = `Tee Sanitario Ø2`;
   }
 
   // Función para manejar el doble clic
@@ -40,7 +40,7 @@ export class DesagueTEE extends SingleShapeBase {
     this.ctx.save();
 
     // Mover el contexto al punto de dibujo y rotar
-    this.ctx.translate(x, y + 6);
+    this.ctx.translate(x, y + 6 );
     this.ctx.rotate((this.rotation * Math.PI) / 180);
 
     const verticalStartX = 0;
@@ -50,24 +50,43 @@ export class DesagueTEE extends SingleShapeBase {
 
     this.ctx.beginPath();
 
+    // Dibujar la línea vertical principal
     this.ctx.moveTo(verticalStartX, verticalStartY);
     this.ctx.lineTo(verticalStartX, verticalStartY + verticalLength);
 
+    // Dibujar las líneas horizontales en cada extremo del vertical
+    this.ctx.moveTo(verticalStartX - 3, verticalStartY);
+    this.ctx.lineTo(verticalStartX + 3, verticalStartY);
     this.ctx.moveTo(verticalStartX - 3, verticalStartY + verticalLength);
     this.ctx.lineTo(verticalStartX + 3, verticalStartY + verticalLength);
 
+    // Dibujar la línea horizontal principal
     this.ctx.moveTo(horizontalStartX, horizontalStartY);
     this.ctx.lineTo(horizontalStartX + horizontalLength, horizontalStartY);
 
+    // Dibujar las líneas verticales en cada extremo del horizontal
     this.ctx.moveTo(horizontalStartX, horizontalStartY - 3);
     this.ctx.lineTo(horizontalStartX, horizontalStartY + 3);
     this.ctx.moveTo(horizontalStartX + horizontalLength, horizontalStartY - 3);
     this.ctx.lineTo(horizontalStartX + horizontalLength, horizontalStartY + 3);
 
-    this.ctx.moveTo(verticalStartX - 3, verticalStartY);
-    this.ctx.lineTo(verticalStartX + 3, verticalStartY);
+    // Dibujar las segundas líneas horizontales en cada extremo del vertical
 
-    this.ctx.lineWidth = 2.5;
+    this.ctx.moveTo(verticalStartX - 3, verticalStartY + verticalLength + 3);
+    this.ctx.lineTo(verticalStartX + 3, verticalStartY + verticalLength + 3);
+
+    // Dibujar las segundas líneas verticales en cada extremo del horizontal
+    this.ctx.moveTo(horizontalStartX - 3, horizontalStartY - 3);
+    this.ctx.lineTo(horizontalStartX - 3, horizontalStartY + 3);
+    this.ctx.moveTo(
+      horizontalStartX + horizontalLength + 3,
+      horizontalStartY - 3
+    );
+    this.ctx.lineTo(
+      horizontalStartX + horizontalLength + 3,
+      horizontalStartY + 3
+    );
+    this.ctx.lineWidth = 2;
     this.ctx.strokeStyle = this.color;
 
     this.ctx.stroke();

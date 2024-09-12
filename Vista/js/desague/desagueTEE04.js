@@ -3,13 +3,13 @@ import { SingleShapeBase } from "../single_shape_base.js";
 const verticalLength = 10;
 const horizontalLength = 10;
 
-export class DesagueTEE extends SingleShapeBase {
+export class DesagueTEE04 extends SingleShapeBase {
   static labelCount = 0;
   static totalCount = 0;
 
   constructor(ctx, color) {
     super(ctx, color);
-    this.label = `Codo Tee 02`;
+    this.label = `Codo Tee 04`;
   }
 
   // Función para manejar el doble clic
